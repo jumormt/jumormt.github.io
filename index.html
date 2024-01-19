@@ -292,5 +292,27 @@ function w3_close() {
 
 </script>
 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+$(document).ready(function() {
+    var int = setInterval(fixCount, 50); 
+    var countOffset = 20000;
+    function fixCount() {            
+      if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset);
+            clearInterval(int);
+        }  
+    }
+
+});
+</script>
+
+Visitors: <span id="busuanzi_value_site_pv"></span>
 </body>
 </html>
