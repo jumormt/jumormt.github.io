@@ -67,7 +67,13 @@
 
 <!-- The Home Section -->
     <div class="w3-container w3-center w3-padding-16" id="home">
-      <img style="width: 50%;max-width: 300px" alt="profile photo" src="images/xiao_photo_r.jpg">
+      <img style="width: 50%;max-width: 300px; cursor: pointer;" alt="profile photo" id="profilePhoto" src="images/xiao_photo_r_comic.png"
+        onmousedown="var img=this; img._timer=setTimeout(function(){img.src='images/xiao_photo_r.jpg'; img._held=true;},500);"
+        onmouseup="clearTimeout(this._timer); if(this._held){this._held=false;} else{this.src='images/xiao_photo_r_comic.png';}"
+        onmouseleave="clearTimeout(this._timer); this._held=false; this.src='images/xiao_photo_r_comic.png';"
+        ontouchstart="var img=this; img._timer=setTimeout(function(){img.src='images/xiao_photo_r.jpg'; img._held=true;},500);"
+        ontouchend="clearTimeout(this._timer); if(this._held){this._held=false;} else{this.src='images/xiao_photo_r_comic.png';}"
+        >
       <h1>Xiao Cheng</h1>
         <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:850px;line-height:20px">
           Xiao Cheng is a lecturer (~U.S.Assistant Professor) at <a href="https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/school-of-computing">School of Computing</a>, 
