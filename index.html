@@ -38,6 +38,7 @@
     <a href="#news" class="w3-bar-item w3-button">News</a>
     <!-- <a href="#projects" class="w3-bar-item w3-button">Projects</a> -->
     <!-- <a href="#talks" class="w3-bar-item w3-button">Talks</a> -->
+    <a href="#research" class="w3-bar-item w3-button">Research</a>
     <a href="#publications" class="w3-bar-item w3-button">Publications</a>
     <a href="#service" class="w3-bar-item w3-button">Services</a>
     <a href="#teaching" class="w3-bar-item w3-button">Teaching</a>
@@ -125,8 +126,43 @@
 
   </div>
   
+ <!-- The Research Directions Section -->
+  <div class="w3-container" id="research" style="padding-bottom: 10px">
+    <h3 style="display: inline;">Research Directions</h3> <a href="html/research.html" class="btn btn-primary btn-xs" style="vertical-align: middle; margin-left: 8px;">Details &rarr;</a>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;">
+
+      <div style="flex: 1; min-width: 250px; border: 1px solid #ddd; border-radius: 6px; padding: 14px 16px; background: #f9f9f9;">
+        <h4 style="margin-top: 0; border-bottom: 2px solid #4CAF50; padding-bottom: 6px;">Scalable and Precise Static Analysis</h4>
+        <ul style="padding-left: 18px; margin-bottom: 0;">
+          <li>Abstract interpretation <br><span style="font-size:12px; color:#555;">[<a href="#publications">C5</a>: ICSE '24] [<a href="#publications">C9</a>: ECOOP '25] [<a href="#publications">C10</a>: OOPSLA '25]</span></li>
+          <li>Typestate analysis <br><span style="font-size:12px; color:#555;">[<a href="#publications">C6</a>: FSE '24]</span></li>
+          <li>Pointer analysis and specification inference <br><span style="font-size:12px; color:#555;">[<a href="#publications">C11</a>: ICSE '26] [<a href="#publications">P1</a>: arXiv]</span></li>
+          <li>Quantum-accelerated analysis <br><span style="font-size:12px; color:#555;">[<a href="#publications">J3</a>: TOSEM '24]</span></li>
+        </ul>
+      </div>
+
+      <div style="flex: 1; min-width: 250px; border: 1px solid #ddd; border-radius: 6px; padding: 14px 16px; background: #f9f9f9;">
+        <h4 style="margin-top: 0; border-bottom: 2px solid #2196F3; padding-bottom: 6px;">AI for Software Engineering</h4>
+        <ul style="padding-left: 18px; margin-bottom: 0;">
+          <li>LLM-driven program repair and specification generation <br><span style="font-size:12px; color:#555;">[<a href="#publications">C13</a>: FSE '26] [<a href="#publications">C11</a>: ICSE '26]</span></li>
+          <li>Code embedding and vulnerability detection <br><span style="font-size:12px; color:#555;">[<a href="#publications">C2</a>: OOPSLA '20] [<a href="#publications">C3</a>: ISSTA '22] [<a href="#publications">J1</a>: TOSEM '21] [<a href="#publications">J2</a>: TDSC]</span></li>
+        </ul>
+      </div>
+
+      <div style="flex: 1; min-width: 250px; border: 1px solid #ddd; border-radius: 6px; padding: 14px 16px; background: #f9f9f9;">
+        <h4 style="margin-top: 0; border-bottom: 2px solid #FF9800; padding-bottom: 6px;">Software Security and Testing</h4>
+        <ul style="padding-left: 18px; margin-bottom: 0;">
+          <li>Memory safety <br><span style="font-size:12px; color:#555;">[<a href="#publications">C6</a>: FSE '24] [<a href="#publications">C13</a>: FSE '26]</span></li>
+          <li>Fuzz testing <br><span style="font-size:12px; color:#555;">[<a href="#publications">C14</a>: S&P '26] [<a href="#publications">C12</a>: NDSS '26]</span></li>
+          <li>Malware detection <br><span style="font-size:12px; color:#555;">[<a href="#publications">C8</a>: FSE '25] [<a href="#publications">C7</a>: ISSTA '25]</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
  <!-- The Publications Section -->
-  <div class="w3-container"" id="publications" style="padding-bottom: 10px">
+  <div class="w3-container w3-light-grey" id="publications" style="padding-bottom: 10px">
     <h3>Publications</h3>
 	  <p style="font-size: 14px;">
         (<sup>#</sup> Equal contribution,&nbsp; <sup>*</sup> Corresponding author)
@@ -144,17 +180,23 @@
     <h4>Selected Publications</h4>
     <ul>
 
-      <li><strong>[C13] PUFFERDOS: Efficient and Effective Attack String Generation for Regular Expression Denial of Service Vulnerabilities</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
+      <li><strong>[C14] PUFFERDOS: Efficient and Effective Attack String Generation for Regular Expression Denial of Service Vulnerabilities</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
             <br>
             Shangzhi Xu, Ziqi Ding, <strong>Xiao Cheng<sup>*</sup></strong>, Yuekang Li, Nan Sun, Benjamin Turnbull, Shuangxiang Kan, Siqi Ma<sup>*</sup>.
             <br>
             </a> <strong>47th IEEE Symposium on Security and Privacy (S&P '26) (acceptance rate: 135/1070=12.62%)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a>
 
-      <li><strong>[C12] TLR: Codebase-Level C Memory Management Error Repair with Large Language Models</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
+      <li><strong>[C13] TLR: Codebase-Level C Memory Management Error Repair with Large Language Models</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
             <br>
             <strong>Xiao Cheng</strong><sup>#</sup>, Zhihao Guo<sup>#</sup>, Huan Huo, Yulei Sui.
             <br>
             </a> <strong>ACM International Conference on the Foundations of Software Engineering (FSE '26) (acceptance rate: 87/920=9.46%)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a>
+
+      <li><strong>[C12] MUTATO: Enhancing Fuzz Drivers with Adaptive API Option Mutation</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
+            <br>
+            Shuangxiang Kan, <strong>Xiao Cheng<sup>*</sup></strong>, Yuekang Li.
+            <br>
+            </a> <strong>33rd Network and Distributed System Security Symposium (NDSS '26)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a>
 
       <li><strong>[C11] SpecGuru: Hierarchical LLM-Driven API Points-to Specification Generation with Self-Validation</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
             <br>
@@ -220,17 +262,23 @@
 
 	    <h4>Published Papers</h4>
         <ul>
-         <li><strong>[C13] PUFFERDOS: Efficient and Effective Attack String Generation for Regular Expression Denial of Service Vulnerabilities</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
+         <li><strong>[C14] PUFFERDOS: Efficient and Effective Attack String Generation for Regular Expression Denial of Service Vulnerabilities</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
             <br>
             Shangzhi Xu, Ziqi Ding, <strong>Xiao Cheng<sup>*</sup></strong>, Yuekang Li, Nan Sun, Benjamin Turnbull, Shuangxiang Kan, Siqi Ma<sup>*</sup>.
             <br>
             </a> <strong>47th IEEE Symposium on Security and Privacy (S&P '26) (acceptance rate: 135/1070=12.62%)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a>
 
-         <li><strong>[C12] TLR: Codebase-Level C Memory Management Error Repair with Large Language Models</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
+         <li><strong>[C13] TLR: Codebase-Level C Memory Management Error Repair with Large Language Models</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
             <br>
             <strong>Xiao Cheng</strong><sup>#</sup>, Zhihao Guo<sup>#</sup>, Huan Huo, Yulei Sui.
             <br>
             </a> <strong>ACM International Conference on the Foundations of Software Engineering (FSE '26) (acceptance rate: 87/920=9.46%)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a>
+
+         <li><strong>[C12] MUTATO: Enhancing Fuzz Drivers with Adaptive API Option Mutation</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
+            <br>
+            Shuangxiang Kan, <strong>Xiao Cheng<sup>*</sup></strong>, Yuekang Li.
+            <br>
+            </a> <strong>33rd Network and Distributed System Security Symposium (NDSS '26)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a>
 
          <li><strong>[C11] SpecGuru: Hierarchical LLM-Driven API Points-to Specification Generation with Self-Validation</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
             <br>
@@ -323,7 +371,7 @@
   </div>
 
 <!-- The Services Section -->
-  <div class="w3-container w3-light-grey" id="service" style="padding-bottom: 10px">
+  <div class="w3-container" id="service" style="padding-bottom: 10px">
     <h3>Services</h3>
     <ul style="padding-left: 2em;">
     <li> Webchair of LCTES 2024.</li>
@@ -334,7 +382,7 @@
   </div>
 
   <!-- The Teaching Section -->
-  <div class="w3-container" id="teaching" style="padding-bottom: 10px">
+  <div class="w3-container w3-light-grey" id="teaching" style="padding-bottom: 10px">
     <h3>Teaching Experience</h3>
     <ul style="padding-left: 2em;">
      <li> Convenor, Lecturer and SGTA, <a href="https://coursehandbook.mq.edu.au/2026/units/COMP3050">COMP3050 Software Systems Development and Operations</a>, Macquarie University, 2026 S1 (with <a href="https://www.linkedin.com/in/lachlan-patrick-981270266/">Lachlan Patrick</a>).</li>
@@ -349,7 +397,7 @@
   </div>
 
   <!-- The Tool Section -->
-  <div class="w3-container w3-light-grey" id="tools" style="padding-bottom: 10px">
+  <div class="w3-container" id="tools" style="padding-bottom: 10px">
     <h3>Tools</h3>
     <ul style="padding-left: 2em;">
      <li> Developer and mantainer, <a href="https://github.com/SVF-tools/SVF">SVF</a><img src="https://img.shields.io/github/stars/SVF-tools/SVF"> (authored by <a href="https://yuleisui.github.io/">Yulei Sui</a>), a source code analysis framework that enables interprocedural dependence analysis for LLVM-based languages.</li>
@@ -358,7 +406,7 @@
   </div>
 
   <!-- The Education Section -->
-  <div class="w3-container" id="edu" style="padding-bottom: 10px">
+  <div class="w3-container w3-light-grey" id="edu" style="padding-bottom: 10px">
     <h3>Education</h3>
     <ul style="padding-left: 2em;">
     <li> 2021-2024, Ph.D. in Computer Science and Engineering, <a href="https://www.unsw.edu.au/homepage/">University of New South Wales (UNSW)</a>.
@@ -367,7 +415,7 @@
   </div>  
 
   <!-- The Awards Section -->
-  <div class="w3-container w3-light-grey" id="award" style="padding-bottom: 10px">
+  <div class="w3-container" id="award" style="padding-bottom: 10px">
     <h3>Awards</h3>
     <ul style="padding-left: 2em;">
 	  <li>2025, <a href="https://www.amazon.science/research-awards/program-updates/70-amazon-research-award-recipients-announced">Amazon Research Award (ARA)</a>, "Path-Sensitive Typestate Analysis through Sparse Abstract Execution", Key Participant.</li>
@@ -386,7 +434,7 @@
 	
   
   <!-- The Misc Section -->
-  <div class="w3-container" id="misc" style="padding-bottom: 10px">
+  <div class="w3-container w3-light-grey" id="misc" style="padding-bottom: 10px">
     <h3>Misc</h3>
     <ul style="padding-left: 2em;">
     <li> <a href="http://www.cs.wisc.edu/wpis/talks/WritingResearchPapers.pptx">Tips on writing a research paper</a>, <a href="http://www.tcse.cn/~wsdou/advice/research%20tips-su.pdf">Doing Research in Software Analysis Lessons and Tips</a>.</li>

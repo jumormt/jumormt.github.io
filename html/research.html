@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>Research - Xiao Cheng</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Research directions of Xiao Cheng at Macquarie University">
+  <link rel="stylesheet" href="../w3.css">
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../images/xiao_icon.png">
+  <style>
+    body, h1, h2, h3, h4, h5, h6 { font-family: Georgia, serif; }
+    a { color: #1a0dab; }
+    .topic-card { border: 1px solid #ddd; border-radius: 6px; padding: 16px 20px; margin-bottom: 16px; background: #f9f9f9; }
+    .paper-ref { font-size: 13px; color: #555; display: inline-block; background: #e8e8e8; border-radius: 3px; padding: 1px 6px; margin: 2px 2px; }
+    .paper-ref a { color: #333; }
+    .section-divider { border: none; border-top: 2px solid #ddd; margin: 28px 0; }
+  </style>
+</head>
+
+<body>
+<div class="w3-content" style="max-width: 900px; margin: auto; padding: 24px;">
+
+  <h1>Research Directions</h1>
+  <p><a href="../index.html">&larr; Back to homepage</a></p>
+
+  <p>My research lies at the intersection of <strong>Programming Languages</strong>, <strong>Software Engineering</strong>, and <strong>Security</strong>.
+  I develop techniques that combine rigorous program analysis with modern AI to improve the reliability and security of real-world software systems.</p>
+
+  <!-- ===== Direction 1 ===== -->
+  <hr class="section-divider">
+  <h2 style="border-left: 4px solid #4CAF50; padding-left: 10px;">Scalable and Precise Static Analysis</h2>
+  <p>Static analysis detects software bugs without executing the program. My work focuses on making these techniques both <em>scalable</em> to millions of lines of code and <em>precise</em> enough to produce actionable results with low false positive rates.</p>
+
+  <div class="topic-card">
+    <h4>Abstract Interpretation</h4>
+    <p>Abstract interpretation computes sound over-approximations of program behaviors. My work addresses key challenges in making it practical for large codebases:</p>
+    <ul>
+      <li><strong>Cross-domain sparse abstract execution</strong> &mdash; We proposed CSA, a framework enabling online bidirectional refinement between memory address and interval domains via implication-equivalent correlation tracking, achieving ~2.5x speedup and 96% false positive reduction on real-world projects.
+        <span class="paper-ref">[<a href="../index.html#publications">C5</a>: ICSE '24]</span></li>
+      <li><strong>Selective widening</strong> &mdash; We proposed SiftAbs, which uses value-flow cycle analysis to selectively apply widening only where needed, reducing widening variables by up to 99.5% and analysis time by up to 41% while maintaining identical precision.
+        <span class="paper-ref">[<a href="../index.html#publications">C10</a>: OOPSLA '25]</span></li>
+      <li><strong>Recursive program analysis</strong> &mdash; We proposed RecTopo, an interprocedural weak topological ordering technique that partitions programs to eliminate spurious interprocedural cycles, achieving 95% precision on recursive programs (vs ~52% for baselines).
+        <span class="paper-ref">[<a href="../index.html#publications">C9</a>: ECOOP '25]</span></li>
+    </ul>
+  </div>
+
+  <div class="topic-card">
+    <h4>Typestate Analysis</h4>
+    <p>Typestate analysis verifies that objects follow correct API usage protocols (e.g., a file must be opened before reading and closed after use).</p>
+    <ul>
+      <li><strong>Graph simplification for path-sensitive typestate analysis</strong> &mdash; We proposed FGS, a tempo-spatial multi-point slicing technique that reduces ICFG nodes by 89% as preprocessing, achieving 116x speedup and detecting 105 real bugs in 10 open-source projects with 82% precision. This work received the <strong>ACM SIGSOFT Distinguished Paper Award</strong>.
+        <span class="paper-ref">[<a href="../index.html#publications">C6</a>: FSE '24]</span></li>
+    </ul>
+  </div>
+
+  <div class="topic-card">
+    <h4>Pointer Analysis and Specification Inference</h4>
+    <p>Pointer analysis determines what memory locations a pointer may reference, which is foundational for many downstream analyses.</p>
+    <ul>
+      <li><strong>Flow-sensitive pointer analysis without CFG</strong> &mdash; We proposed an efficient Andersen-style flow-sensitive pointer analysis that avoids constructing a full control flow graph.
+        <span class="paper-ref">[<a href="../index.html#publications">P1</a>: arXiv]</span></li>
+      <li><strong>LLM-driven API specification generation</strong> &mdash; We proposed SpecGuru, which uses LLMs with bottom-up inference and differential testing-based self-validation to generate points-to specifications for library APIs, achieving 91% precision and 89% recall across 15 C libraries.
+        <span class="paper-ref">[<a href="../index.html#publications">C11</a>: ICSE '26]</span></li>
+    </ul>
+  </div>
+
+  <div class="topic-card">
+    <h4>Quantum-Accelerated Analysis</h4>
+    <ul>
+      <li><strong>Quantum speedups for transitive closure-based analysis</strong> &mdash; We proposed the first truly subcubic quantum-accelerated framework for CFL-reachability and set constraint solving, reducing complexity from O(N<sup>3</sup>) to O(N<sup>2.5</sup> &middot; polylog(N)) using Grover's algorithm.
+        <span class="paper-ref">[<a href="../index.html#publications">J3</a>: TOSEM '24]</span></li>
+    </ul>
+  </div>
+
+  <!-- ===== Direction 2 ===== -->
+  <hr class="section-divider">
+  <h2 style="border-left: 4px solid #2196F3; padding-left: 10px;">AI for Software Engineering</h2>
+  <p>I explore how AI techniques &mdash; from graph neural networks to large language models &mdash; can be integrated with program analysis to automate software engineering tasks such as bug detection, code understanding, and program repair.</p>
+
+  <div class="topic-card">
+    <h4>LLM-Driven Program Repair and Specification Generation</h4>
+    <ul>
+      <li><strong>Repository-level memory error repair</strong> &mdash; We proposed LTFix, the first system combining LLMs with typestate-guided program analysis for codebase-level memory error repair. It fixes 37 out of 49 real memory errors (94.7% more than SWE-agent) using ~1/42 of the tokens, and successfully repaired 3 zero-day vulnerabilities.
+        <span class="paper-ref">[<a href="../index.html#publications">C13</a>: FSE '26]</span></li>
+      <li><strong>API specification generation</strong> &mdash; SpecGuru uses hierarchical LLM inference with self-validation to automatically generate points-to specifications for C library APIs, enabling effective alias and taint analysis without library source code.
+        <span class="paper-ref">[<a href="../index.html#publications">C11</a>: ICSE '26]</span></li>
+    </ul>
+  </div>
+
+  <div class="topic-card">
+    <h4>Code Embedding and Vulnerability Detection</h4>
+    <ul>
+      <li><strong>Value-flow-based code embedding</strong> &mdash; We proposed Flow2Vec, which preserves interprocedural alias-aware value-flow transitivity via matrix multiplication and CFL-reachability, improving code classification by 21% F1 over code2vec/code2seq. This work received the <strong>ACM SIGPLAN Distinguished Paper Award</strong>.
+        <span class="paper-ref">[<a href="../index.html#publications">C2</a>: OOPSLA '20]</span></li>
+      <li><strong>Path-sensitive code embedding</strong> &mdash; We proposed ContraFlow, a contrastive learning approach on value-flow paths that achieves 83% F1 for vulnerability detection with up to 450% improvement in vulnerability localization metrics.
+        <span class="paper-ref">[<a href="../index.html#publications">C3</a>: ISSTA '22]</span></li>
+      <li><strong>GNN-based vulnerability detection</strong> &mdash; We proposed DeepWukong, using graph neural networks on program dependence graph slices, achieving 97% accuracy and 96% F1 across 10 CWE types.
+        <span class="paper-ref">[<a href="../index.html#publications">J1</a>: TOSEM '21]</span></li>
+      <li><strong>Evaluating learning-based detectors</strong> &mdash; We proposed bug-triggering path (BTP) metrics, revealing an 85% IoU gap between learning methods and traditional static analyzers in vulnerability localization.
+        <span class="paper-ref">[<a href="../index.html#publications">J2</a>: TDSC]</span></li>
+    </ul>
+  </div>
+
+  <!-- ===== Direction 3 ===== -->
+  <hr class="section-divider">
+  <h2 style="border-left: 4px solid #FF9800; padding-left: 10px;">Software Security and Testing</h2>
+  <p>I develop tools and techniques to detect and mitigate real-world security vulnerabilities through a combination of static analysis, dynamic analysis, and fuzz testing.</p>
+
+  <div class="topic-card">
+    <h4>Memory Safety</h4>
+    <ul>
+      <li><strong>Detecting memory errors via typestate analysis</strong> &mdash; FGS enables precise path-sensitive detection of use-after-free, double-free, and memory leak bugs in large C/C++ codebases with low false positive rates.
+        <span class="paper-ref">[<a href="../index.html#publications">C6</a>: FSE '24]</span></li>
+      <li><strong>Automated memory error repair</strong> &mdash; LTFix combines typestate-guided context retrieval with LLMs to automatically generate patches for memory management errors at the repository level.
+        <span class="paper-ref">[<a href="../index.html#publications">C13</a>: FSE '26]</span></li>
+    </ul>
+  </div>
+
+  <div class="topic-card">
+    <h4>Fuzz Testing</h4>
+    <ul>
+      <li><strong>ReDoS attack string generation</strong> &mdash; We proposed PUFFERDOS, an efficient method for generating attack strings that trigger Regular Expression Denial of Service vulnerabilities.
+        <span class="paper-ref">[<a href="../index.html#publications">C14</a>: S&P '26]</span></li>
+      <li><strong>Fuzz driver enhancement</strong> &mdash; We proposed MUTATO, which uses adaptive API option parameter mutation with an epsilon-greedy strategy to enhance fuzz drivers, discovering 12 previously unknown vulnerabilities (3 CVEs) including 4 bugs missed by OSS-Fuzz.
+        <span class="paper-ref">[<a href="../index.html#publications">C12</a>: NDSS '26]</span></li>
+    </ul>
+  </div>
+
+  <div class="topic-card">
+    <h4>Malware Detection</h4>
+    <ul>
+      <li><strong>Mitigating label noise</strong> &mdash; We proposed MalCleanse, which combines uncertainty estimation with unsupervised anomaly detection to identify emergent malware label noise, improving label accuracy by ~25 percentage points.
+        <span class="paper-ref">[<a href="../index.html#publications">C8</a>: FSE '25]</span></li>
+      <li><strong>Robust training under data imbalance</strong> &mdash; We proposed MalTutor, an uncertainty-guided curriculum learning framework that improves malware detection F1 by 139% on average across multiple detectors.
+        <span class="paper-ref">[<a href="../index.html#publications">C7</a>: ISSTA '25]</span></li>
+    </ul>
+  </div>
+
+  <hr class="section-divider">
+  <p style="font-size: 13px; color: #666;">
+    <a href="../index.html">&larr; Back to homepage</a>
+  </p>
+
+</div>
+</body>
+</html>
