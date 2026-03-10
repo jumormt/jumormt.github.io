@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>Scalable and Precise Static Analysis - Xiao Cheng</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../w3.css">
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../images/xiao_icon.png">
+  <style>
+    body, h1, h2, h3, h4, h5, h6 { font-family: Georgia, serif; }
+    a { color: #1a0dab; }
+    .paper-ref { font-size: 13px; color: #555; display: inline-block; background: #e8e8e8; border-radius: 3px; padding: 1px 6px; margin: 2px 2px; }
+    .paper-ref a { color: #333; }
+    h4 { border-left: 3px solid #4CAF50; padding-left: 8px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+<div class="w3-content" style="max-width: 900px; margin: auto; padding: 24px;">
+
+  <h1 style="border-left: 4px solid #4CAF50; padding-left: 10px;">Scalable and Precise Static Analysis</h1>
+  <p><a href="../index.html">&larr; Back to homepage</a></p>
+
+  <p>Static analysis detects software bugs without executing the program. My work focuses on making these techniques both <em>scalable</em> to millions of lines of code and <em>precise</em> enough to produce actionable results with low false positive rates.</p>
+
+  <h4>Abstract Interpretation</h4>
+    <p>Abstract interpretation computes sound over-approximations of program behaviors. My work addresses key challenges in making it practical for large codebases:</p>
+    <ul>
+      <li><strong>Cross-domain sparse abstract execution</strong> &mdash; We proposed CSA, a framework enabling online bidirectional refinement between memory address and interval domains via implication-equivalent correlation tracking, achieving ~2.5x speedup and 96% false positive reduction on real-world projects.
+        <span class="paper-ref">[<a href="../index.html#publications">C5</a>: ICSE '24]</span></li>
+      <li><strong>Selective widening</strong> &mdash; We proposed SiftAbs, which uses value-flow cycle analysis to selectively apply widening only where needed, reducing widening variables by up to 99.5% and analysis time by up to 41% while maintaining identical precision.
+        <span class="paper-ref">[<a href="../index.html#publications">C10</a>: OOPSLA '25]</span></li>
+      <li><strong>Recursive program analysis</strong> &mdash; We proposed RecTopo, an interprocedural weak topological ordering technique that partitions programs to eliminate spurious interprocedural cycles, achieving 95% precision on recursive programs (vs ~52% for baselines).
+        <span class="paper-ref">[<a href="../index.html#publications">C9</a>: ECOOP '25]</span></li>
+    </ul>
+
+  <h4>Typestate Analysis</h4>
+    <p>Typestate analysis verifies that objects follow correct API usage protocols (e.g., a file must be opened before reading and closed after use).</p>
+    <ul>
+      <li><strong>Graph simplification for path-sensitive typestate analysis</strong> &mdash; We proposed FGS, a tempo-spatial multi-point slicing technique that reduces ICFG nodes by 89% as preprocessing, achieving 116x speedup and detecting 105 real bugs in 10 open-source projects with 82% precision. This work received the <strong>ACM SIGSOFT Distinguished Paper Award</strong>.
+        <span class="paper-ref">[<a href="../index.html#publications">C6</a>: FSE '24]</span></li>
+    </ul>
+
+  <h4>Pointer Analysis and Specification Inference</h4>
+    <p>Pointer analysis determines what memory locations a pointer may reference, which is foundational for many downstream analyses.</p>
+    <ul>
+      <li><strong>Flow-sensitive pointer analysis without CFG</strong> &mdash; We proposed an efficient Andersen-style flow-sensitive pointer analysis that avoids constructing a full control flow graph.
+        <span class="paper-ref">[<a href="../index.html#publications">P1</a>: arXiv]</span></li>
+      <li><strong>LLM-driven API specification generation</strong> &mdash; We proposed SpecGuru, which uses LLMs with bottom-up inference and differential testing-based self-validation to generate points-to specifications for library APIs, achieving 91% precision and 89% recall across 15 C libraries.
+        <span class="paper-ref">[<a href="../index.html#publications">C11</a>: ICSE '26]</span></li>
+    </ul>
+
+  <h4>Quantum-Accelerated Analysis</h4>
+    <ul>
+      <li><strong>Quantum speedups for transitive closure-based analysis</strong> &mdash; We proposed the first truly subcubic quantum-accelerated framework for CFL-reachability and set constraint solving, reducing complexity from O(N<sup>3</sup>) to O(N<sup>2.5</sup> &middot; polylog(N)) using Grover's algorithm.
+        <span class="paper-ref">[<a href="../index.html#publications">J3</a>: TOSEM '24]</span></li>
+    </ul>
+
+  <p style="font-size: 13px; color: #666;"><a href="../index.html">&larr; Back to homepage</a></p>
+</div>
+</body>
+</html>

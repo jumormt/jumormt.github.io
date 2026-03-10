@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>AI for Software Engineering - Xiao Cheng</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../w3.css">
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../images/xiao_icon.png">
+  <style>
+    body, h1, h2, h3, h4, h5, h6 { font-family: Georgia, serif; }
+    a { color: #1a0dab; }
+    .paper-ref { font-size: 13px; color: #555; display: inline-block; background: #e8e8e8; border-radius: 3px; padding: 1px 6px; margin: 2px 2px; }
+    .paper-ref a { color: #333; }
+    h4 { border-left: 3px solid #2196F3; padding-left: 8px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+<div class="w3-content" style="max-width: 900px; margin: auto; padding: 24px;">
+
+  <h1 style="border-left: 4px solid #2196F3; padding-left: 10px;">AI for Software Engineering</h1>
+  <p><a href="../index.html">&larr; Back to homepage</a></p>
+
+  <p>I explore how AI techniques &mdash; from graph neural networks to large language models &mdash; can be integrated with program analysis to automate software engineering tasks such as bug detection, code understanding, and program repair.</p>
+
+  <h4>LLM-Driven Program Repair and Specification Generation</h4>
+    <ul>
+      <li><strong>Repository-level memory error repair</strong> &mdash; We proposed LTFix, the first system combining LLMs with typestate-guided program analysis for codebase-level memory error repair. It fixes 37 out of 49 real memory errors (94.7% more than SWE-agent) using ~1/42 of the tokens, and successfully repaired 3 zero-day vulnerabilities.
+        <span class="paper-ref">[<a href="../index.html#publications">C13</a>: FSE '26]</span></li>
+      <li><strong>API specification generation</strong> &mdash; SpecGuru uses hierarchical LLM inference with self-validation to automatically generate points-to specifications for C library APIs, enabling effective alias and taint analysis without library source code.
+        <span class="paper-ref">[<a href="../index.html#publications">C11</a>: ICSE '26]</span></li>
+    </ul>
+
+  <h4>Code Embedding and Vulnerability Detection</h4>
+    <ul>
+      <li><strong>Value-flow-based code embedding</strong> &mdash; We proposed Flow2Vec, which preserves interprocedural alias-aware value-flow transitivity via matrix multiplication and CFL-reachability, improving code classification by 21% F1 over code2vec/code2seq. This work received the <strong>ACM SIGPLAN Distinguished Paper Award</strong>.
+        <span class="paper-ref">[<a href="../index.html#publications">C2</a>: OOPSLA '20]</span></li>
+      <li><strong>Path-sensitive code embedding</strong> &mdash; We proposed ContraFlow, a contrastive learning approach on value-flow paths that achieves 83% F1 for vulnerability detection with up to 450% improvement in vulnerability localization metrics.
+        <span class="paper-ref">[<a href="../index.html#publications">C3</a>: ISSTA '22]</span></li>
+      <li><strong>GNN-based vulnerability detection</strong> &mdash; We proposed DeepWukong, using graph neural networks on program dependence graph slices, achieving 97% accuracy and 96% F1 across 10 CWE types.
+        <span class="paper-ref">[<a href="../index.html#publications">J1</a>: TOSEM '21]</span></li>
+      <li><strong>Evaluating learning-based detectors</strong> &mdash; We proposed bug-triggering path (BTP) metrics, revealing an 85% IoU gap between learning methods and traditional static analyzers in vulnerability localization.
+        <span class="paper-ref">[<a href="../index.html#publications">J2</a>: TDSC]</span></li>
+    </ul>
+
+  <p style="font-size: 13px; color: #666;"><a href="../index.html">&larr; Back to homepage</a></p>
+</div>
+</body>
+</html>

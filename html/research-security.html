@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>Software Security and Testing - Xiao Cheng</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../w3.css">
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../images/xiao_icon.png">
+  <style>
+    body, h1, h2, h3, h4, h5, h6 { font-family: Georgia, serif; }
+    a { color: #1a0dab; }
+    .paper-ref { font-size: 13px; color: #555; display: inline-block; background: #e8e8e8; border-radius: 3px; padding: 1px 6px; margin: 2px 2px; }
+    .paper-ref a { color: #333; }
+    h4 { border-left: 3px solid #FF9800; padding-left: 8px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+<div class="w3-content" style="max-width: 900px; margin: auto; padding: 24px;">
+
+  <h1 style="border-left: 4px solid #FF9800; padding-left: 10px;">Software Security and Testing</h1>
+  <p><a href="../index.html">&larr; Back to homepage</a></p>
+
+  <p>I develop tools and techniques to detect and mitigate real-world security vulnerabilities through a combination of static analysis, dynamic analysis, and fuzz testing.</p>
+
+  <h4>Memory Safety</h4>
+    <ul>
+      <li><strong>Detecting memory errors via typestate analysis</strong> &mdash; FGS enables precise path-sensitive detection of use-after-free, double-free, and memory leak bugs in large C/C++ codebases with low false positive rates.
+        <span class="paper-ref">[<a href="../index.html#publications">C6</a>: FSE '24]</span></li>
+      <li><strong>Automated memory error repair</strong> &mdash; LTFix combines typestate-guided context retrieval with LLMs to automatically generate patches for memory management errors at the repository level.
+        <span class="paper-ref">[<a href="../index.html#publications">C13</a>: FSE '26]</span></li>
+    </ul>
+
+  <h4>Fuzz Testing</h4>
+    <ul>
+      <li><strong>ReDoS attack string generation</strong> &mdash; We proposed PUFFERDOS, an efficient method for generating attack strings that trigger Regular Expression Denial of Service vulnerabilities.
+        <span class="paper-ref">[<a href="../index.html#publications">C14</a>: S&P '26]</span></li>
+      <li><strong>Fuzz driver enhancement</strong> &mdash; We proposed MUTATO, which uses adaptive API option parameter mutation with an epsilon-greedy strategy to enhance fuzz drivers, discovering 12 previously unknown vulnerabilities (3 CVEs) including 4 bugs missed by OSS-Fuzz.
+        <span class="paper-ref">[<a href="../index.html#publications">C12</a>: NDSS '26]</span></li>
+    </ul>
+
+  <h4>Malware Detection</h4>
+    <ul>
+      <li><strong>Mitigating label noise</strong> &mdash; We proposed MalCleanse, which combines uncertainty estimation with unsupervised anomaly detection to identify emergent malware label noise, improving label accuracy by ~25 percentage points.
+        <span class="paper-ref">[<a href="../index.html#publications">C8</a>: FSE '25]</span></li>
+      <li><strong>Robust training under data imbalance</strong> &mdash; We proposed MalTutor, an uncertainty-guided curriculum learning framework that improves malware detection F1 by 139% on average across multiple detectors.
+        <span class="paper-ref">[<a href="../index.html#publications">C7</a>: ISSTA '25]</span></li>
+    </ul>
+
+  <p style="font-size: 13px; color: #666;"><a href="../index.html">&larr; Back to homepage</a></p>
+</div>
+</body>
+</html>
