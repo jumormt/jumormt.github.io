@@ -110,6 +110,7 @@
 	  <li>&#128204; <img src="images/new.gif" alt="news"> 03/2026, I’m serving on the program committee for <a href="https://conf.researchr.org/home/icse-2027">ICSE 2027</a>. Please consider submitting your work!</li>
 	  <li>&#128204; <img src="images/new.gif" alt="news"> 12/2025, I’m serving on the program committee for <a href="https://conf.researchr.org/track/ase-2026/ase-2026-research-track">ASE 2026</a>. Please consider submitting your work!</li>
 
+	  <li><img src="images/new.gif" alt="news"> 03/2026, Our work on SVGD-based hazardous scenario generation for autonomous driving testing accepted at <a href="https://conf.researchr.org/home/fse-2026">FSE 2026</a>. Congrats to Linfeng Liang, T.Y. Chen, and Xi Zheng!</li>
 	  <li><img src="images/new.gif" alt="news"> 03/2026, Our work on ReDoS attack string generation accepted at <a href="https://www.ieee-security.org/TC/SP2026/">IEEE S&P 2026</a>. Congrats to Shangzhi Xu!</li>
 	  <li><img src="images/new.gif" alt="news"> 12/2025, Our work on codebase-level C memory error repair accepted at <a href="https://conf.researchr.org/home/fse-2026">FSE 2026</a>.</li>
 
@@ -156,7 +157,7 @@
       <li><a href="html/research-security.html"><strong>Software Security and Testing</strong></a>
         <ul>
           <li>Memory safety [<a href="data/fse24.pdf">C6</a>: FSE '24] [<a href="#publications">C13</a>: FSE '26]</li>
-          <li>Dynamic testing [<a href="#publications">C14</a>: S&P '26] [<a href="#publications">C12</a>: NDSS '26]</li>
+          <li>Dynamic testing [<a href="#publications">C15</a>: FSE '26] [<a href="#publications">C14</a>: S&P '26] [<a href="#publications">C12</a>: NDSS '26]</li>
           <li>Malware detection [<a href="https://dl.acm.org/doi/epdf/10.1145/3715769">C8</a>: FSE '25] [<a href="https://dl.acm.org/doi/epdf/10.1145/3728884">C7</a>: ISSTA '25]</li>
         </ul>
       </li>
@@ -175,7 +176,7 @@
 		    <li>
 			    <strong>[P1] Flow Sensitivity without Control Flow Graph: An Efficient Andersen-Style Flow-Sensitive Pointer Analysis</strong>
 			    <br>
-                Jiahao Zhang<sup>#</sup>, <strong>Xiao Cheng<sup>#</sup></strong>, Yuxiang Lei.
+                Jiahao Zhang<sup>#</sup>, <strong>Xiao Cheng<sup>#</sup></strong>, <a href="https://kisslune.github.io/">Yuxiang Lei</a>.
                 <br>
                 </a> <strong>arXiv</strong> <a href="https://arxiv.org/abs/2508.01974" class="btn btn-primary btn-xs">PDF</a>
 	    </ul>
@@ -185,17 +186,20 @@
         <el-timeline-item type="info" size="large">
           <strong @click="s26=!s26" style="cursor:pointer; font-size:16px;">2026 <span style="font-size:12px;">{{s26 ? '▾' : '▸'}}</span></strong>
           <ul v-show="s26" style="list-style: none; padding-left: 0; margin: 4px 0 0 0;">
-            <li><strong>[C14] PUFFERDOS: Efficient and Effective Attack String Generation for Regular Expression Denial of Service Vulnerabilities</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
-              <br>Shangzhi Xu, Ziqi Ding, <strong>Xiao Cheng<sup>*</sup></strong>, Yuekang Li, Nan Sun, Benjamin Turnbull, Shuangxiang Kan, Siqi Ma<sup>*</sup>.
+            <li><strong>[C15] From Particles to Perils: SVGD-Based Hazardous Scenario Generation for Autonomous Driving Systems Testing</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
+              <br>Linfeng Liang, <strong>Xiao Cheng<sup>*</sup></strong>, <a href="https://www.swinburne.edu.au/research/our-research/access-our-research/find-a-researcher-or-supervisor/researcher-profile/?id=tychen">T.Y. Chen</a>, <a href="https://researchers.mq.edu.au/en/persons/xi-zheng/">Xi Zheng</a>.
+              <br><strong>FSE '26</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a></li>
+            <li style="margin-top:8px"><strong>[C14] PUFFERDOS: Efficient and Effective Attack String Generation for Regular Expression Denial of Service Vulnerabilities</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
+              <br>Shangzhi Xu, Ziqi Ding, <strong>Xiao Cheng<sup>*</sup></strong>, <a href="https://thepatrickstar.github.io/">Yuekang Li</a>, <a href="https://www.unsw.edu.au/staff/nan-sun">Nan Sun</a>, <a href="https://www.unsw.edu.au/staff/benjamin-turnbull">Benjamin Turnbull</a>, <a href="https://shuangxiangkan.github.io/">Shuangxiang Kan</a>, <a href="https://siqima.me/">Siqi Ma</a><sup>*</sup>.
               <br><strong>S&P '26 (acceptance rate: 135/1070=12.62%)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a></li>
             <li style="margin-top:8px"><strong>[C13] TLR: Codebase-Level C Memory Management Error Repair with Large Language Models</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
-              <br><strong>Xiao Cheng</strong><sup>#</sup>, Zhihao Guo<sup>#</sup>, Huan Huo, Yulei Sui.
+              <br><strong>Xiao Cheng</strong><sup>#</sup>, Zhihao Guo<sup>#</sup>, <a href="https://profiles.uts.edu.au/huan.huo">Huan Huo</a>, <a href="https://yuleisui.github.io/">Yulei Sui</a>.
               <br><strong>FSE '26 (acceptance rate: 87/920=9.46%)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a></li>
             <li style="margin-top:8px"><strong>[C12] MUTATO: Enhancing Fuzz Drivers with Adaptive API Option Mutation</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
-              <br>Shuangxiang Kan, <strong>Xiao Cheng<sup>*</sup></strong>, Yuekang Li.
+              <br><a href="https://shuangxiangkan.github.io/">Shuangxiang Kan</a>, <strong>Xiao Cheng<sup>*</sup></strong>, <a href="https://thepatrickstar.github.io/">Yuekang Li</a>.
               <br><strong>NDSS '26</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a></li>
             <li style="margin-top:8px"><strong>[C11] SpecGuru: Hierarchical LLM-Driven API Points-to Specification Generation with Self-Validation</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
-              <br>Shuangxiang Kan, Yuekang Li, <strong>Xiao Cheng<sup>*</sup></strong>, Yulei Sui.
+              <br><a href="https://shuangxiangkan.github.io/">Shuangxiang Kan</a>, <a href="https://thepatrickstar.github.io/">Yuekang Li</a>, <strong>Xiao Cheng<sup>*</sup></strong>, <a href="https://yuleisui.github.io/">Yulei Sui</a>.
               <br><strong>ICSE '26</strong> <a href="" class="btn btn-primary btn-xs">PDF</a> <a href="" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/specguru.html" class="btn btn-primary btn-xs">BIB</a></li>
           </ul>
         </el-timeline-item>
@@ -203,13 +207,13 @@
           <strong @click="s25=!s25" style="cursor:pointer; font-size:16px;">2025 <span style="font-size:12px;">{{s25 ? '▾' : '▸'}}</span></strong>
           <ul v-show="s25" style="list-style: none; padding-left: 0; margin: 4px 0 0 0;">
             <li><strong>[C10] Efficient Abstract Interpretation via Selective Widening</strong> <span class="label label-success">CORE-A</span> <span class="label label-success">CCF-A</span>
-              <br>Jiawei Wang<sup>#</sup>, <strong>Xiao Cheng<sup>#</sup></strong>, Yulei Sui.
+              <br>Jiawei Wang<sup>#</sup>, <strong>Xiao Cheng<sup>#</sup></strong>, <a href="https://yuleisui.github.io/">Yulei Sui</a>.
               <br><strong>OOPSLA '25</strong> <a href="https://dl.acm.org/doi/pdf/10.1145/3763083" class="btn btn-primary btn-xs">PDF</a> <a href="" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/selwiden.html" class="btn btn-primary btn-xs">BIB</a></li>
             <li style="margin-top:8px"><strong>[C8] Mitigating Emergent Malware Label Noise in DNN-Based Android Malware Detection</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
-              <br>Haodong Li<sup>#</sup>, <strong>Xiao Cheng<sup>#</sup></strong>, Guohan Zhang<sup>*</sup>, Guosheng Xu, Guoai Xu and Haoyu Wang<sup>*</sup>.
+              <br>Haodong Li<sup>#</sup>, <strong>Xiao Cheng<sup>#</sup></strong>, Guohan Zhang<sup>*</sup>, Guosheng Xu, <a href="https://scss.bupt.edu.cn/info/1063/1189.htm">Guoai Xu</a> and <a href="https://howiepku.github.io/">Haoyu Wang</a><sup>*</sup>.
               <br><strong>FSE '25 (acceptance rate: 70/612=11.44%)</strong> <a href="https://dl.acm.org/doi/epdf/10.1145/3715769" class="btn btn-primary btn-xs">PDF</a> <a href="" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/MalCleanse.html" class="btn btn-primary btn-xs">BIB</a></li>
             <li style="margin-top:8px"><strong>[C7] Understanding Model Weaknesses: A Path to Strengthening DNN-Based Android Malware Detection</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
-              <br>Haodong Li, <strong>Xiao Cheng<sup>*</sup></strong>, Yanjie Zhao, Guosheng Xu, Guoai Xu and Haoyu Wang<sup>*</sup>.
+              <br>Haodong Li, <strong>Xiao Cheng<sup>*</sup></strong>, <a href="https://yanjiezhao96.github.io/">Yanjie Zhao</a>, Guosheng Xu, <a href="https://scss.bupt.edu.cn/info/1063/1189.htm">Guoai Xu</a> and <a href="https://howiepku.github.io/">Haoyu Wang</a><sup>*</sup>.
               <br><strong>ISSTA '25 (acceptance rate: 23/553=4.16%)</strong> <a href="https://dl.acm.org/doi/epdf/10.1145/3728884" class="btn btn-primary btn-xs">PDF</a> <a href="" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/MalTutor.html" class="btn btn-primary btn-xs">BIB</a></li>
           </ul>
         </el-timeline-item>
@@ -217,10 +221,10 @@
           <strong @click="s24=!s24" style="cursor:pointer; font-size:16px;">2024 <span style="font-size:12px;">{{s24 ? '▾' : '▸'}}</span></strong>
           <ul v-show="s24" style="list-style: none; padding-left: 0; margin: 4px 0 0 0;">
             <li><strong>[C6] Fast Graph Simplification for Path-Sensitive Typestate Analysis through Tempo-Spatial Multi-Point Slicing</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span> <span class="label label-success">ACM SIGSOFT Distinguished Paper AWARD</span>
-              <br><strong>Xiao Cheng</strong>, Jiawei Ren, Yulei Sui
+              <br><strong>Xiao Cheng</strong>, Jiawei Ren, <a href="https://yuleisui.github.io/">Yulei Sui</a>
               <br><strong>FSE '24</strong> <a href="data/fse24.pdf" class="btn btn-primary btn-xs">PDF</a> <a href="data/fse24_slides.pdf" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/fgs.html" class="btn btn-primary btn-xs">BIB</a></li>
             <li style="margin-top:8px"><strong>[C5] Precise Sparse Abstract Execution via Cross-Domain Interaction</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
-              <br><strong>Xiao Cheng</strong>, Jiawei Wang, Yulei Sui
+              <br><strong>Xiao Cheng</strong>, Jiawei Wang, <a href="https://yuleisui.github.io/">Yulei Sui</a>
               <br><strong>ICSE '24</strong> <a href="data/icse24.pdf" class="btn btn-primary btn-xs">PDF</a> <a href="data/icse24_slides.pdf" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/csa.html" class="btn btn-primary btn-xs">BIB</a></li>
           </ul>
         </el-timeline-item>
@@ -228,7 +232,7 @@
           <strong @click="s22=!s22" style="cursor:pointer; font-size:16px;">2022 <span style="font-size:12px;">{{s22 ? '▾' : '▸'}}</span></strong>
           <ul v-show="s22" style="list-style: none; padding-left: 0; margin: 4px 0 0 0;">
             <li><strong>[C3] Path-Sensitive Code Embedding via Contrastive Learning for Software Vulnerability Detection</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
-              <br><strong>Xiao Cheng</strong>, Guanqin Zhang, Haoyu Wang and Yulei Sui
+              <br><strong>Xiao Cheng</strong>, <a href="https://guanqin-123.github.io/">Guanqin Zhang</a>, <a href="https://howiepku.github.io/">Haoyu Wang</a> and <a href="https://yuleisui.github.io/">Yulei Sui</a>
               <br><strong>ISSTA '22</strong> <a href="data/issta22.pdf" class="btn btn-primary btn-xs">PDF</a> <a href="data/issta22_slides.pdf" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/contra.html" class="btn btn-primary btn-xs">BIB</a></li>
           </ul>
         </el-timeline-item>
@@ -236,7 +240,7 @@
           <strong @click="s20=!s20" style="cursor:pointer; font-size:16px;">2020 <span style="font-size:12px;">{{s20 ? '▾' : '▸'}}</span></strong>
           <ul v-show="s20" style="list-style: none; padding-left: 0; margin: 4px 0 0 0;">
             <li><strong>[C2] Flow2Vec: Value-Flow-Based Precise Code Embedding</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span> <span class="label label-success">ACM SIGPLAN Distinguished Paper AWARD</span>
-              <br>Yulei Sui, <strong>Xiao Cheng</strong>, Guanqin Zhang and Haoyu Wang
+              <br><a href="https://yuleisui.github.io/">Yulei Sui</a>, <strong>Xiao Cheng</strong>, <a href="https://guanqin-123.github.io/">Guanqin Zhang</a> and <a href="https://howiepku.github.io/">Haoyu Wang</a>
               <br><strong>OOPSLA '20</strong> <a href="data/oopsla20.pdf" class="btn btn-primary btn-xs">PDF</a> <a href="bibs/flow2vec.html" class="btn btn-primary btn-xs">BIB</a></li>
           </ul>
         </el-timeline-item>
