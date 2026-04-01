@@ -141,7 +141,7 @@
       <li><a href="html/research-analysis.html"><strong>Scalable and Precise Static Analysis</strong></a>
         <ul>
           <li>Abstract interpretation [<a href="data/icse24.pdf">C5</a>: ICSE '24] [<a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol333-ecoop2025/LIPIcs.ECOOP.2025.34/LIPIcs.ECOOP.2025.34.pdf">C9</a>: ECOOP '25] [<a href="https://dl.acm.org/doi/pdf/10.1145/3763083">C10</a>: OOPSLA '25]</li>
-          <li>Typestate analysis [<a href="data/fse24.pdf">C6</a>: FSE '24]</li>
+          <li>Typestate analysis [<a href="data/fse24.pdf">C6</a>: FSE '24] [<a href="#publications">C13</a>: FSE '26]</li>
           <li>Pointer analysis and specification inference [<a href="#publications">C11</a>: ICSE '26] [<a href="https://arxiv.org/abs/2508.01974">P1</a>: arXiv]</li>
           <li>Quantum-accelerated analysis [<a href="data/tosem24.pdf">J3</a>: TOSEM '24]</li>
         </ul>
@@ -156,7 +156,7 @@
       </li>
       <li><a href="html/research-security.html"><strong>Software Security and Testing</strong></a>
         <ul>
-          <li>Memory safety [<a href="data/fse24.pdf">C6</a>: FSE '24] [<a href="#publications">C13</a>: FSE '26]</li>
+          <li>Memory safety [<a href="data/icse24.pdf">C5</a>: ICSE '24] [<a href="data/fse24.pdf">C6</a>: FSE '24] [<a href="#publications">C13</a>: FSE '26]</li>
           <li>Dynamic testing [<a href="#publications">C15</a>: FSE '26] [<a href="#publications">C14</a>: S&P '26] [<a href="#publications">C12</a>: NDSS '26]</li>
           <li>Malware detection [<a href="https://dl.acm.org/doi/epdf/10.1145/3715769">C8</a>: FSE '25] [<a href="https://dl.acm.org/doi/epdf/10.1145/3728884">C7</a>: ISSTA '25]</li>
         </ul>
@@ -178,7 +178,7 @@
 			    <br>
                 Jiahao Zhang<sup>#</sup>, <strong>Xiao Cheng<sup>#</sup></strong>, <a href="https://kisslune.github.io/">Yuxiang Lei</a>.
                 <br>
-                </a> <strong>arXiv</strong> <a href="https://arxiv.org/abs/2508.01974" class="btn btn-primary btn-xs">PDF</a>
+                </a> <strong>arXiv</strong> <a href="https://arxiv.org/abs/2508.01974" class="btn btn-primary btn-xs">PDF</a> <a href="bibs/fspta.html" class="btn btn-primary btn-xs">BIB</a>
 	    </ul>
     <h4>Selected Publications</h4>
     <div id="pub-timeline" style="margin-top:8px">
@@ -186,18 +186,18 @@
         <el-timeline-item type="info" size="large">
           <strong @click="s26=!s26" style="cursor:pointer; font-size:16px;">2026 <span style="font-size:12px;">{{s26 ? '▾' : '▸'}}</span></strong>
           <ul v-show="s26" style="list-style: none; padding-left: 0; margin: 4px 0 0 0;">
-            <li><strong>[C15] From Particles to Perils: SVGD-Based Hazardous Scenario Generation for Autonomous Driving Systems Testing</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
-              <br>Linfeng Liang, <strong>Xiao Cheng<sup>*</sup></strong>, <a href="https://scholar.google.com.au/citations?user=usJzGjUAAAAJ&hl=en">T.Y. Chen</a>, <a href="https://researchers.mq.edu.au/en/persons/xi-zheng/">Xi Zheng</a>.
-              <br><strong>FSE '26</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a></li>
-            <li style="margin-top:8px"><strong>[C14] PUFFERDOS: Efficient and Effective Attack String Generation for Regular Expression Denial of Service Vulnerabilities</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
+            <li><strong>[C14] PUFFERDOS: Efficient and Effective Attack String Generation for Regular Expression Denial of Service Vulnerabilities</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
               <br>Shangzhi Xu, Ziqi Ding, <strong>Xiao Cheng<sup>*</sup></strong>, <a href="https://thepatrickstar.github.io/">Yuekang Li</a>, <a href="https://www.unsw.edu.au/staff/nan-sun">Nan Sun</a>, <a href="https://www.unsw.edu.au/staff/benjamin-turnbull">Benjamin Turnbull</a>, <a href="https://shuangxiangkan.github.io/">Shuangxiang Kan</a>, <a href="https://siqima.me/">Siqi Ma</a><sup>*</sup>.
-              <br><strong>S&P '26 (acceptance rate: 135/1070=12.62%)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a></li>
+              <br><strong>S&P '26 (acceptance rate: 135/1070=12.62%)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/pufferdos.html" class="btn btn-primary btn-xs">BIB</a></li>
+            <li style="margin-top:8px"><strong>[C15] From Particles to Perils: SVGD-Based Hazardous Scenario Generation for Autonomous Driving Systems Testing</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
+              <br>Linfeng Liang, <strong>Xiao Cheng<sup>*</sup></strong>, <a href="https://scholar.google.com.au/citations?user=usJzGjUAAAAJ&hl=en">T.Y. Chen</a>, <a href="https://researchers.mq.edu.au/en/persons/xi-zheng/">Xi Zheng</a>.
+              <br><strong>FSE '26</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/svgd.html" class="btn btn-primary btn-xs">BIB</a></li>
             <li style="margin-top:8px"><strong>[C13] TLR: Codebase-Level C Memory Management Error Repair with Large Language Models</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
               <br><strong>Xiao Cheng</strong><sup>#</sup>, Zhihao Guo<sup>#</sup>, <a href="https://profiles.uts.edu.au/huan.huo">Huan Huo</a>, <a href="https://yuleisui.github.io/">Yulei Sui</a>.
-              <br><strong>FSE '26 (acceptance rate: 87/920=9.46%)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a></li>
+              <br><strong>FSE '26 (acceptance rate: 87/920=9.46%)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/tlr.html" class="btn btn-primary btn-xs">BIB</a></li>
             <li style="margin-top:8px"><strong>[C12] MUTATO: Enhancing Fuzz Drivers with Adaptive API Option Mutation</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
               <br><a href="https://shuangxiangkan.github.io/">Shuangxiang Kan</a>, <strong>Xiao Cheng<sup>*</sup></strong>, <a href="https://thepatrickstar.github.io/">Yuekang Li</a>.
-              <br><strong>NDSS '26</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a></li>
+              <br><strong>NDSS '26</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/mutato.html" class="btn btn-primary btn-xs">BIB</a></li>
             <li style="margin-top:8px"><strong>[C11] SpecGuru: Hierarchical LLM-Driven API Points-to Specification Generation with Self-Validation</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
               <br><a href="https://shuangxiangkan.github.io/">Shuangxiang Kan</a>, <a href="https://thepatrickstar.github.io/">Yuekang Li</a>, <strong>Xiao Cheng<sup>*</sup></strong>, <a href="https://yuleisui.github.io/">Yulei Sui</a>.
               <br><strong>ICSE '26</strong> <a href="" class="btn btn-primary btn-xs">PDF</a> <a href="" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/specguru.html" class="btn btn-primary btn-xs">BIB</a></li>
