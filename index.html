@@ -110,6 +110,7 @@
 	  <li>&#128204; <img src="images/new.gif" alt="news"> 03/2026, I’m serving on the program committee for <a href="https://conf.researchr.org/home/icse-2027">ICSE 2027</a>. Please consider submitting your work!</li>
 	  <li>&#128204; <img src="images/new.gif" alt="news"> 12/2025, I’m serving on the program committee for <a href="https://conf.researchr.org/track/ase-2026/ase-2026-research-track">ASE 2026</a>. Please consider submitting your work!</li>
 
+	  <li><img src="images/new.gif" alt="news"> 04/2026, Our work on multi-stage on-demand program slicing for modular analysis of multi-threaded programs accepted at <a href="https://conf.researchr.org/home/issta-2026">ISSTA 2026</a>. Congrats to Jiawei Yang, Jiawei Wang, <a href="https://www4.comp.polyu.edu.hk/~csxluo/">Xiapu Luo</a>, and <a href="https://yuleisui.github.io/">Yulei Sui</a>!</li>
 	  <li><img src="images/new.gif" alt="news"> 03/2026, Our work on SVGD-based hazardous scenario generation for autonomous driving testing accepted at <a href="https://conf.researchr.org/home/fse-2026">FSE 2026</a>. Congrats to Linfeng Liang, <a href="https://scholar.google.com.au/citations?user=usJzGjUAAAAJ&hl=en">T.Y. Chen</a>, and <a href="https://researchers.mq.edu.au/en/persons/xi-zheng/">Xi Zheng</a>!</li>
 	  <li><img src="images/new.gif" alt="news"> 03/2026, Our work on ReDoS attack string generation accepted at <a href="https://www.ieee-security.org/TC/SP2026/">IEEE S&P 2026</a>. Congrats to Shangzhi Xu, Ziqi Ding, <a href="https://thepatrickstar.github.io/">Yuekang Li</a>, <a href="https://www.unsw.edu.au/staff/nan-sun">Nan Sun</a>, <a href="https://www.unsw.edu.au/staff/benjamin-turnbull">Benjamin Turnbull</a>, <a href="https://shuangxiangkan.github.io/">Shuangxiang Kan</a>, and <a href="https://siqima.me/">Siqi Ma</a>!</li>
 	  <li><img src="images/new.gif" alt="news"> 12/2025, Our work on codebase-level C memory error repair accepted at <a href="https://conf.researchr.org/home/fse-2026">FSE 2026</a>. Thanks to Zhihao Guo, <a href="https://profiles.uts.edu.au/huan.huo">Huan Huo</a>, and <a href="https://yuleisui.github.io/">Yulei Sui</a>!</li>
@@ -143,6 +144,7 @@
           <li>Abstract interpretation [<a href="data/icse24.pdf">C5</a>: ICSE '24] [<a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol333-ecoop2025/LIPIcs.ECOOP.2025.34/LIPIcs.ECOOP.2025.34.pdf">C9</a>: ECOOP '25] [<a href="https://dl.acm.org/doi/pdf/10.1145/3763083">C10</a>: OOPSLA '25]</li>
           <li>Typestate analysis [<a href="data/fse24.pdf">C6</a>: FSE '24] [<a href="#publications">C13</a>: FSE '26]</li>
           <li>Pointer analysis and specification inference [<a href="#publications">C11</a>: ICSE '26] [<a href="https://arxiv.org/abs/2508.01974">P1</a>: arXiv]</li>
+          <li>Program slicing and multi-threaded program analysis [<a href="#publications">C16</a>: ISSTA '26]</li>
           <li>Quantum-accelerated analysis [<a href="data/tosem24.pdf">J3</a>: TOSEM '24]</li>
         </ul>
       </li>
@@ -186,7 +188,10 @@
         <el-timeline-item type="info" size="large">
           <strong @click="s26=!s26" style="cursor:pointer; font-size:16px;">2026 <span style="font-size:12px;">{{s26 ? '▾' : '▸'}}</span></strong>
           <ul v-show="s26" style="list-style: none; padding-left: 0; margin: 4px 0 0 0;">
-            <li><strong>[C14] PUFFERDOS: Efficient and Effective Attack String Generation for Regular Expression Denial of Service Vulnerabilities</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
+            <li><strong>[C16] Multi-Stage On-Demand Program Slicing for Modular Analysis of Multi-Threaded Programs</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
+              <br>Jiawei Yang, <strong>Xiao Cheng</strong>, Jiawei Wang, <a href="https://www4.comp.polyu.edu.hk/~csxluo/">Xiapu Luo</a>, <a href="https://yuleisui.github.io/">Yulei Sui</a>.
+              <br><strong>ISSTA '26 (acceptance rate: 90/938=9.59%)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/mosps.html" class="btn btn-primary btn-xs">BIB</a></li>
+            <li style="margin-top:8px"><strong>[C14] PUFFERDOS: Efficient and Effective Attack String Generation for Regular Expression Denial of Service Vulnerabilities</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
               <br>Shangzhi Xu, Ziqi Ding, <strong>Xiao Cheng<sup>*</sup></strong>, <a href="https://thepatrickstar.github.io/">Yuekang Li</a>, <a href="https://www.unsw.edu.au/staff/nan-sun">Nan Sun</a>, <a href="https://www.unsw.edu.au/staff/benjamin-turnbull">Benjamin Turnbull</a>, <a href="https://shuangxiangkan.github.io/">Shuangxiang Kan</a>, <a href="https://siqima.me/">Siqi Ma</a><sup>*</sup>.
               <br><strong>S&P '26 (acceptance rate: 135/1070=12.62%)</strong> <a href="#" class="btn btn-primary btn-xs">PDF</a> <a href="#" class="btn btn-primary btn-xs">Slides</a> <a href="bibs/pufferdos.html" class="btn btn-primary btn-xs">BIB</a></li>
                <li style="margin-top:8px"><strong>[C13] TLR: Codebase-Level C Memory Management Error Repair with Large Language Models</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
