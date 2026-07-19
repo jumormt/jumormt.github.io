@@ -10,6 +10,8 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-07-19 | [merged-visitor-map](plans/2026-07-19-13-merged-visitor-map.md) | E0 | done | Replaced the two-map footer with one archived historical map plus live green coordinate overlays and graceful failure behavior. |
+| 2026-07-19 | [live-visitor-map](plans/2026-07-19-12-live-visitor-globe.md) | E0 | done | Introduced the replacement live dataset and visible archive; its interim two-card layout was superseded by the merged-map plan. |
 | 2026-07-19 | [supervision-additions](plans/2026-07-19-11-supervision-additions.md) | E0 | done | Added Thanakit Rattikanchalakorn to Current and Jianing Wang to Alumni with their supplied status details. |
 | 2026-07-19 | [comp3050-feedback-summary](plans/2026-07-19-10-comp3050-feedback-summary.md) | E0 | done | Published a privacy-safe aggregate/paraphrased COMP3050 feedback page; the internal PDF, demographics, and response-level comments remain private. |
 | 2026-07-19 | [canvas-globe-refinement](plans/2026-07-19-09-canvas-globe-refinement.md) | E0 | done | Upgraded the flat scrolling fallback to a 150×150 Canvas sphere projection with curved texture slices, lighting, reduced-motion support, and the site's own archived red dots. |
@@ -24,12 +26,13 @@
 | 2026-07-02 | [scaffolding](plans/2026-07-02-01-scaffolding.md) | E0 | done | **LDD bootstrap complete.** Added `docs/PROGRESS.md` and `docs/plans/2026-07-02-01-scaffolding.md`. Project is a plain static GitHub Pages site; no build/test pipeline exists. |
 
 ## Next Steps
+- **Immediate:** Monitor the published merged visitor map to confirm live green locations continue updating alongside the preserved historical dots.
 - **Before any future code/content change:** Create a new dated plan under `docs/plans/` and add it to this index.
 - **Likely next useful plan:** Add a lightweight static-site verification workflow for HTML/link checks and manual browser smoke testing.
 - **Content update reminder:** When publications change, update both the selected and full publication lists, any linked `bibs/*.html` entry, relevant `data/` PDFs, and the news section if applicable.
 
 ## Known Issues
-- The original ClustrMaps domain is parked and its HTTPS service is unavailable. The footer therefore uses a clearly dated, animated archive snapshot; new geographic visitor locations cannot be collected without starting a dataset on another provider.
+- The original ClustrMaps domain remains unavailable, and its raw dataset cannot be imported into MapMyVisitors. The footer performs a presentation-layer merge instead: the archived record through 23 February 2026 remains the map base, with live MapMyVisitors coordinates since 19 July 2026 overlaid in green. Provider-side counts remain separate.
 - No automated validation currently exists for internal links, external links, or HTML consistency; verify manually after content updates.
 - Publication metadata is duplicated across selected and full lists in `index.html`, so updates can drift unless both places are checked.
 
@@ -45,6 +48,36 @@
 ## Session Log
 
 ### 2026-07-19
+- **Focus:** Single-map historical/live visitor merge.
+- **Completed:** Replaced the interim two-card footer with one responsive map; retained the archived ClustrMaps image and historical dots as the base; registered the new MapMyVisitors widget through its public bootstrap callback; parsed public JSONP `latLng` values without evaluating provider code; projected live locations as green markers; added a compact legend, 30-second refresh, provider attribution, archive link, and historical-only failure behavior; left Busuanzi unchanged.
+- **Tests:** MapMyVisitors bootstrap returned project `2248156` and valid hit IDs with both production and local referrers; its marker endpoint returned parseable coordinates; a DOM simulation verified marker placement and provider-failure fallback; exactly one merged map and one widget ID remain; no interim grid, provider-rendered map, globe, or Canvas widget remains; local homepage HTTP 200; inline JavaScript syntax and `git diff --check` passed.
+- **Files:** `index.html`, `docs/plans/2026-07-19-13-merged-visitor-map.md`, `docs/summaries/2026-07-19-visitor-map-footer.md`, `docs/PROGRESS.md`.
+- **Blockers:** Provider-side historical and live counts cannot be merged because ClustrMaps exposes no surviving raw-data export; the visible geographic record is merged on the page.
+
+- **Focus:** Visible preservation of visitor history.
+- **Completed:** Confirmed the legacy ClustrMaps token cannot be imported into MapMyVisitors; replaced the hidden historical fallback with two restrained, labelled map cards so the archived record through 23 February 2026 and live tracking since 19 July 2026 remain visible together; added a one-column mobile layout and kept Busuanzi unchanged.
+- **Tests:** Legacy token returns the provider's `Error: Incorrect map code!`; archived image and live widget script both return HTTP 200; homepage returns HTTP 200 locally; no CSS rule hides the archived map; both dataset labels and tokens occur in their intended cards; inline JavaScript syntax and `git diff --check` passed.
+- **Files:** `index.html`, `docs/plans/2026-07-19-12-live-visitor-globe.md`, `docs/summaries/2026-07-19-visitor-map-footer.md`, `docs/PROGRESS.md`.
+- **Blockers:** The two providers expose no migration path for merging the legacy and replacement datasets.
+
+- **Focus:** Final flat-map visitor presentation.
+- **Completed:** Replaced the uncommitted live globe layer with the user-supplied responsive `map.js` widget; constrained it to a clean 320px maximum width; removed all globe/Canvas CSS and JavaScript; retained the dated archived map as a visual fallback and historical link; left Busuanzi counting unchanged.
+- **Tests:** Valid 180×112 live tracking PNG; `map.js` and `widget_call_home.js` return valid responses; new token appears once; archived token occurs only in three fallback/history URLs; zero globe/Canvas renderer references; local homepage HTTP 200; inline JavaScript syntax and `git diff --check` passed.
+- **Files:** `index.html`, `docs/plans/2026-07-19-12-live-visitor-globe.md`, `docs/summaries/2026-07-19-visitor-map-footer.md`, `docs/PROGRESS.md`.
+- **Blockers:** None beyond the normal availability dependency on the external live-map provider.
+
+- **Focus:** Live visitor globe restoration with the validated replacement token.
+- **Completed:** Validated the replacement map token, confirmed it also supports the globe endpoint, and layered the 150px live green-marker globe over the existing archived Canvas fallback; added a separate historical-map link and retained Busuanzi counting unchanged.
+- **Tests:** Valid map PNG; globe script and callback HTTP 200; callback is valid JSONP; provider includes light/dark green marker styles; new token appears once; archived token remains in four fallback/history URLs; local homepage HTTP 200; inline JavaScript syntax and `git diff --check` passed; opened local preview at the footer.
+- **Files:** `index.html`, `docs/plans/2026-07-19-12-live-visitor-globe.md`, `docs/summaries/2026-07-19-visitor-map-footer.md`, `docs/PROGRESS.md`.
+- **Blockers:** None beyond the normal availability dependency on the external live-map provider.
+
+- **Focus:** Preflight validation for a new live visitor-globe token.
+- **Completed:** Confirmed the supplied widget script is reachable and contains green-marker rendering, then tested its tracking image and JSONP callback; rejected the integration before publication because the provider reports an incorrect map code. Restored the unchanged historical Canvas globe pending widget activation.
+- **Tests:** Widget script HTTP 200; tracking PNG explicitly reports `Error: Incorrect map code!`; live callback returns `text/html` instead of JSONP; no new token remains in `index.html`.
+- **Files:** `docs/plans/2026-07-19-12-live-visitor-globe.md`, `docs/PROGRESS.md`.
+- **Blockers:** MapMyVisitors must activate or replace the supplied widget ID.
+
 - **Focus:** Two additional supervision records.
 - **Completed:** Added Thanakit Rattikanchalakorn as a current Summer Research Student and Jianing Wang as an undergraduate alumnus now pursuing a PhD at Monash.
 - **Tests:** Confirmed both names occur exactly once in Supervision; Current/Alumni counts are 12/6; local homepage returned HTTP 200; inline JavaScript syntax and `git diff --check` passed.

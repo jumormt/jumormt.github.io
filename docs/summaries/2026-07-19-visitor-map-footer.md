@@ -4,7 +4,7 @@
 **Plan:** `docs/plans/2026-07-19-03-visitor-map-footer.md`
 **Tags:** visitor-map, clustrmaps, busuanzi, graceful-degradation, static-site
 
-> **Superseded later on 2026-07-19:** ClustrMaps was subsequently confirmed to serve a domain-parking page over HTTP and refuse HTTPS connections. Plan `docs/plans/2026-07-19-08-historical-globe-counter-fix.md` replaced the dead live loader with an animated archived-map globe and raw, host-aware Busuanzi counting; plan `docs/plans/2026-07-19-09-canvas-globe-refinement.md` then upgraded the flat animation to Canvas sphere projection.
+> **Superseded later on 2026-07-19:** ClustrMaps was subsequently confirmed to serve a domain-parking page over HTTP and refuse HTTPS connections. Plan `docs/plans/2026-07-19-08-historical-globe-counter-fix.md` replaced the dead live loader with an animated archived-map globe and raw, host-aware Busuanzi counting; plan `docs/plans/2026-07-19-09-canvas-globe-refinement.md` then upgraded the flat animation to Canvas sphere projection. Plan `docs/plans/2026-07-19-12-live-visitor-globe.md` introduced a replacement MapMyVisitors dataset. Plan `docs/plans/2026-07-19-13-merged-visitor-map.md` now presents both histories on one map: archived red/yellow dots remain in the base image and public live coordinates are overlaid in green. This merges the visible geography, while provider-side counts remain separate.
 
 ## What Was Built
 

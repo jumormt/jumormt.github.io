@@ -25,96 +25,103 @@
     border-top: 1px solid #e5e5e5;
   }
 
-  .visitor-globe-block {
+  .visitor-map-block {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
   }
 
-  .visitor-globe-title {
+  .visitor-map-title {
     margin: 0 0 10px;
     color: #5f6872;
     font-size: 15px;
     font-weight: 400;
   }
 
-  .visitor-globe {
+  .visitor-map-card {
+    width: 260px;
+    max-width: 100%;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #e1e5e8;
+    border-radius: 7px;
+  }
+
+  .visitor-merged-map {
     position: relative;
-    width: 150px;
-    height: 150px;
-  }
-
-  .visitor-history-globe {
-    position: absolute;
-    inset: 0;
+    display: block;
+    width: 240px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
     overflow: hidden;
-    background-color: #3d8bb8;
-    background-image: url("https://web.archive.org/web/20260223125538id_/https://clustrmaps.com/map_v2.png?d=HA1rasF4Ps-g80mwIHPsyroDFlKH7oDfpAJDT-R0J8U&cl=ffffff");
-    background-repeat: repeat-x;
-    background-position: 0 17px;
-    background-size: 180px 117px;
+    background: #3d8bb8;
     border: 1px solid #d0dce4;
-    border-radius: 50%;
-    box-shadow: 0 2px 7px rgba(40, 68, 88, 0.18);
-    animation: visitor-globe-spin 14s linear infinite;
+    border-radius: 4px;
   }
 
-  .visitor-history-globe::before {
+  .visitor-merged-map img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .visitor-live-layer {
     position: absolute;
-    z-index: 2;
-    content: "";
     inset: 0;
-    border-radius: 50%;
-    box-shadow:
-      inset 14px 3px 20px rgba(255, 255, 255, 0.23),
-      inset -22px -5px 28px rgba(13, 50, 76, 0.38);
-  }
-
-  .visitor-history-globe::after {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 54px;
-    content: "";
-    background: linear-gradient(#3d8bb8 65%, rgba(61, 139, 184, 0));
-  }
-
-  .visitor-history-globe:hover,
-  .visitor-history-globe:focus {
-    border-color: #9db9cb;
-  }
-
-  .visitor-globe-canvas {
-    position: absolute;
-    z-index: 3;
-    inset: 0;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
     pointer-events: none;
   }
 
-  .visitor-history-globe.is-canvas-ready {
-    background-image: none;
-    animation: none;
+  .visitor-live-dot {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    transform: translate(-50%, -50%);
+    background: #25a244;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(20, 92, 40, 0.38);
   }
 
-  @keyframes visitor-globe-spin {
-    from { background-position: 0 17px; }
-    to { background-position: 180px 17px; }
+  .visitor-map-legend {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 7px;
+    color: #7b848c;
+    font-size: 10px;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .visitor-history-globe { animation: none; }
+  .visitor-map-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .visitor-legend-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  .visitor-legend-dot.is-history {
+    background: #e54b2e;
+  }
+
+  .visitor-legend-dot.is-live {
+    background: #25a244;
   }
 
   .visitor-map-status {
     margin: 8px 0 10px;
     color: #87909a;
     font-size: 11px;
+  }
+
+  .visitor-map-status a {
+    color: #6f7e89;
+    text-decoration: underline;
   }
 
   .visitor-map-status.is-error {
@@ -143,6 +150,7 @@
     color: #8a929a;
     font-size: 11px;
   }
+
   </style>
 
   <link rel="icon" type="image/png" href="images/xiao_icon.png">
@@ -491,17 +499,24 @@
   </div>
 
   <footer class="w3-container w3-center w3-padding-24 visitor-footer">
-    <section class="visitor-globe-block" aria-labelledby="visitor-map-heading">
-      <h2 class="visitor-globe-title" id="visitor-map-heading">Visitors around the world</h2>
+    <section class="visitor-map-block" aria-labelledby="visitor-map-heading">
+      <h2 class="visitor-map-title" id="visitor-map-heading">Visitors around the world</h2>
 
-      <div class="visitor-globe">
-        <a class="visitor-history-globe" href="https://web.archive.org/web/20260223125538/https://clustrmaps.com/map_v2.png?d=HA1rasF4Ps-g80mwIHPsyroDFlKH7oDfpAJDT-R0J8U&amp;cl=ffffff" title="Open the preserved visitor map">
-          <canvas class="visitor-globe-canvas" id="visitor-globe-canvas" width="150" height="150" aria-hidden="true" hidden></canvas>
-          <span class="sr-only">Open the preserved visitor map from 23 February 2026</span>
+      <div class="visitor-map-card">
+        <a class="visitor-merged-map" href="https://web.archive.org/web/20260223125538/https://clustrmaps.com/map_v2.png?d=HA1rasF4Ps-g80mwIHPsyroDFlKH7oDfpAJDT-R0J8U&amp;cl=ffffff" title="Open the preserved historical visitor map">
+          <img src="https://web.archive.org/web/20260223125538id_/https://clustrmaps.com/map_v2.png?d=HA1rasF4Ps-g80mwIHPsyroDFlKH7oDfpAJDT-R0J8U&amp;cl=ffffff" alt="Visitor map with historical locations through 23 February 2026 and live locations since 19 July 2026">
+          <div class="visitor-live-layer" id="visitor-live-layer" aria-hidden="true"></div>
         </a>
+
+        <div class="visitor-map-legend" aria-label="Visitor map legend">
+          <span><i class="visitor-legend-dot is-history" aria-hidden="true"></i>Historical</span>
+          <span><i class="visitor-legend-dot is-live" aria-hidden="true"></i>Live</span>
+        </div>
       </div>
 
-      <p class="visitor-map-status">Historical visitor globe &middot; 23 February 2026</p>
+      <p class="visitor-map-status" id="visitor-map-status">
+        Historical through 23 February 2026 &middot; <a href="https://mapmyvisitors.com/web/1c6os">live since 19 July 2026</a>
+      </p>
 
       <span id="busuanzi_container_site_pv" style="display:none">
         <span class="visitor-count">
@@ -531,94 +546,122 @@ new Vue({
   data: { s26: true, s25: true, s24: true, s22: true, s20: true }
 });
 
-// Project the site's archived visitor map and red dots onto a rotating sphere.
-(function renderHistoricalVisitorGlobe() {
-  var canvas = document.getElementById("visitor-globe-canvas");
-  var globeLink = canvas ? canvas.parentElement : null;
-  var context = canvas ? canvas.getContext("2d") : null;
-  var texture = new Image();
-  var reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var size = 150;
-  var center = size / 2;
-  var radius = 72;
-  var crop = { x: 10, y: 43, width: 160, height: 69 };
-  var rotation = 0;
-  var lastFrame = 0;
+// Keep the archived visitor dots as the base and overlay current live coordinates.
+(function renderMergedVisitorMap() {
+  var liveLayer = document.getElementById("visitor-live-layer");
+  var status = document.getElementById("visitor-map-status");
+  var widgetId = "ba8ZCxZKmuHUCpBMf2Y1mosAeUVIBTMwWYnc3MyshcA";
+  var projectId = "";
+  var initialHitId = "";
+  var lastHitId = "";
+  var locations = {};
+  var refreshTimer;
 
-  if (!canvas || !globeLink || !context) return;
+  if (!liveLayer || !status) return;
 
-  function drawGlobe(timestamp) {
-    var x;
-    var normalizedX;
-    var longitude;
-    var textureOffset;
-    var sourceX;
-    var columnHeight;
-    var shade;
-    var highlight;
+  function addJsonpScript(id, src, onError) {
+    var previous = document.getElementById(id);
+    var script = document.createElement("script");
 
-    if (lastFrame && !reducedMotion) {
-      rotation += (timestamp - lastFrame) * (Math.PI * 2 / 14000);
-    }
-    lastFrame = timestamp;
-
-    context.clearRect(0, 0, size, size);
-    context.save();
-    context.beginPath();
-    context.arc(center, center, radius, 0, Math.PI * 2);
-    context.clip();
-    context.imageSmoothingEnabled = true;
-
-    for (x = Math.floor(center - radius); x <= Math.ceil(center + radius); x += 1) {
-      normalizedX = (x + 0.5 - center) / radius;
-      if (Math.abs(normalizedX) >= 1) continue;
-
-      longitude = Math.asin(normalizedX) + rotation;
-      textureOffset = (0.5 + longitude / (Math.PI * 2)) % 1;
-      if (textureOffset < 0) textureOffset += 1;
-      sourceX = crop.x + textureOffset * crop.width;
-      columnHeight = Math.sqrt(1 - normalizedX * normalizedX) * radius;
-
-      context.drawImage(
-        texture,
-        sourceX, crop.y, 1, crop.height,
-        x, center - columnHeight, 1.2, columnHeight * 2
-      );
-    }
-
-    shade = context.createRadialGradient(center - 24, center - 27, 8, center, center, radius);
-    shade.addColorStop(0, "rgba(255,255,255,0.18)");
-    shade.addColorStop(0.52, "rgba(255,255,255,0)");
-    shade.addColorStop(0.82, "rgba(12,43,65,0.12)");
-    shade.addColorStop(1, "rgba(8,30,48,0.48)");
-    context.fillStyle = shade;
-    context.fillRect(0, 0, size, size);
-
-    highlight = context.createRadialGradient(center - 32, center - 34, 0, center - 32, center - 34, 36);
-    highlight.addColorStop(0, "rgba(255,255,255,0.28)");
-    highlight.addColorStop(1, "rgba(255,255,255,0)");
-    context.fillStyle = highlight;
-    context.fillRect(0, 0, size, size);
-    context.restore();
-
-    context.beginPath();
-    context.arc(center, center, radius, 0, Math.PI * 2);
-    context.strokeStyle = "rgba(41, 85, 113, 0.4)";
-    context.lineWidth = 1;
-    context.stroke();
-
-    if (canvas.hidden) {
-      canvas.hidden = false;
-      globeLink.classList.add("is-canvas-ready");
-    }
-
-    if (!reducedMotion) window.requestAnimationFrame(drawGlobe);
+    if (previous) previous.remove();
+    script.id = id;
+    script.async = true;
+    script.src = src;
+    script.onerror = onError;
+    document.head.appendChild(script);
   }
 
-  texture.onload = function() {
-    window.requestAnimationFrame(drawGlobe);
+  function showLiveUnavailable() {
+    status.classList.add("is-error");
+    status.innerHTML = "Historical record shown &middot; live layer temporarily unavailable";
+  }
+
+  function renderLocations() {
+    var coordinates = Object.keys(locations);
+
+    liveLayer.innerHTML = "";
+    coordinates.forEach(function(key) {
+      var location = locations[key];
+      var dot = document.createElement("span");
+      var x = 10 + ((location.longitude + 180) / 360) * 160;
+      var y = 43 + ((90 - location.latitude) / 180) * 69;
+
+      dot.className = "visitor-live-dot";
+      dot.style.left = (x / 180 * 100) + "%";
+      dot.style.top = (y / 117 * 100) + "%";
+      liveLayer.appendChild(dot);
+    });
+
+    status.classList.remove("is-error");
+    status.innerHTML = "Historical through 23 February 2026 &middot; "
+      + "<a href=\"https://mapmyvisitors.com/web/1c6os\">"
+      + coordinates.length + " live location" + (coordinates.length === 1 ? "" : "s")
+      + " since 19 July 2026</a>";
+  }
+
+  function collectLocations(source) {
+    var coordinatePattern = /latLng:\s*\[\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\]/g;
+    var match;
+
+    while ((match = coordinatePattern.exec(source)) !== null) {
+      locations[match[1] + "," + match[2]] = {
+        latitude: Number(match[1]),
+        longitude: Number(match[2])
+      };
+    }
+  }
+
+  function requestLiveMarkers(isInitial) {
+    var query = "last_hit_id=" + encodeURIComponent(lastHitId)
+      + "&initial_hit_id=" + encodeURIComponent(initialHitId)
+      + "&initial=" + (isInitial ? "true" : "false")
+      + "&animate=false&id=" + encodeURIComponent(projectId)
+      + "&globalTotal=false&mapType=default"
+      + "&callback=receiveMergedVisitorMarkers";
+
+    addJsonpScript(
+      "merged-visitor-markers",
+      "https://mapmyvisitors.com/ajax/map?" + query,
+      showLiveUnavailable
+    );
+  }
+
+  window.receiveMergedVisitorMarkers = function(source) {
+    var lastHitMatch = source.match(/_map\.last_hit_id\s*=\s*'(\d+)'/);
+
+    collectLocations(source);
+    if (lastHitMatch) lastHitId = lastHitMatch[1];
+    renderLocations();
+    window.clearTimeout(refreshTimer);
+    refreshTimer = window.setTimeout(function() {
+      requestLiveMarkers(false);
+    }, 30000);
   };
-  texture.src = "https://web.archive.org/web/20260223125538id_/https://clustrmaps.com/map_v2.png?d=HA1rasF4Ps-g80mwIHPsyroDFlKH7oDfpAJDT-R0J8U&cl=ffffff";
+
+  window.receiveMergedVisitorBootstrap = function(source) {
+    var projectMatch = source.match(/'project_id':\s*(\d+)/);
+    var initialHitMatch = source.match(/_map\.initial_hit_id\s*=\s*'(\d+)'/);
+    var lastHitMatch = source.match(/_map\.last_hit_id\s*=\s*'(\d+)'/);
+
+    if (!projectMatch || !initialHitMatch || !lastHitMatch) {
+      showLiveUnavailable();
+      return;
+    }
+
+    projectId = projectMatch[1];
+    initialHitId = initialHitMatch[1];
+    lastHitId = lastHitMatch[1];
+    collectLocations(source);
+    if (Object.keys(locations).length) renderLocations();
+    requestLiveMarkers(true);
+  };
+
+  addJsonpScript(
+    "merged-visitor-bootstrap",
+    "https://mapmyvisitors.com/widget_call_home.js?d=" + encodeURIComponent(widgetId)
+      + "&cl=ffffff&w=240&callback=receiveMergedVisitorBootstrap",
+    showLiveUnavailable
+  );
 })();
 
 // Accordion
