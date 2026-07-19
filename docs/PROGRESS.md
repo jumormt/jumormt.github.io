@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-07-19 | [supervision-additions](plans/2026-07-19-11-supervision-additions.md) | E0 | done | Added Thanakit Rattikanchalakorn to Current and Jianing Wang to Alumni with their supplied status details. |
 | 2026-07-19 | [comp3050-feedback-summary](plans/2026-07-19-10-comp3050-feedback-summary.md) | E0 | done | Published a privacy-safe aggregate/paraphrased COMP3050 feedback page; the internal PDF, demographics, and response-level comments remain private. |
 | 2026-07-19 | [canvas-globe-refinement](plans/2026-07-19-09-canvas-globe-refinement.md) | E0 | done | Upgraded the flat scrolling fallback to a 150×150 Canvas sphere projection with curved texture slices, lighting, reduced-motion support, and the site's own archived red dots. |
 | 2026-07-19 | [historical-globe-counter-fix](plans/2026-07-19-08-historical-globe-counter-fix.md) | E0 | done | Replaced the parked ClustrMaps service with an animated same-token historical globe; production now uses raw Busuanzi counts and local previews suppress shared localhost numbers. |
@@ -44,6 +45,12 @@
 ## Session Log
 
 ### 2026-07-19
+- **Focus:** Two additional supervision records.
+- **Completed:** Added Thanakit Rattikanchalakorn as a current Summer Research Student and Jianing Wang as an undergraduate alumnus now pursuing a PhD at Monash.
+- **Tests:** Confirmed both names occur exactly once in Supervision; Current/Alumni counts are 12/6; local homepage returned HTTP 200; inline JavaScript syntax and `git diff --check` passed.
+- **Files:** `index.html`, `docs/plans/2026-07-19-11-supervision-additions.md`, `docs/PROGRESS.md`.
+- **Blockers:** None.
+
 - **Focus:** Privacy-safe COMP3050 student-feedback highlights.
 - **Completed:** Created a responsive summary page with four aggregate teaching indicators, the survey response rate, and paraphrased recurring positive themes; added a Teaching Experience link; kept the internal report, response count, demographics, and response-level comments out of the repository.
 - **Tests:** Confirmed no COMP3050 source PDF exists in the repository; verified the four reported ratings and published 44.4% response rate; both summary and homepage returned HTTP 200; homepage inline JavaScript syntax and `git diff --check` passed; opened the summary in the local browser preview.
