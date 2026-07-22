@@ -10,6 +10,11 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-07-22 | [remove-feedback-4-7](plans/2026-07-22-05-remove-feedback-4-7.md) | E0 | done | Removed the Constructive Guidance 4.7/5 card and retained only the three selected 4.8/5 indicators. |
+| 2026-07-22 | [collapsible-supervision](plans/2026-07-22-04-collapsible-supervision.md) | E0 | done | Converted Current and Alumni into native collapsible groups with entry counts; Current opens by default and Alumni starts closed. |
+| 2026-07-22 | [ruijun-feng-supervision](plans/2026-07-22-03-ruijun-feng-supervision.md) | E0 | done | Added Ruijun Feng as a current PhD student at UNSW immediately after Penghao Jiang. |
+| 2026-07-22 | [hide-tools-section](plans/2026-07-22-02-hide-tools-section.md) | E0 | done | Commented out the Tools navigation and section without deleting them; shifted Education, Awards, and Misc backgrounds to preserve alternation. |
+| 2026-07-22 | [visitor-map-unknown-location](plans/2026-07-22-01-visitor-map-unknown-location.md) | E0 | done | Identified `[28, -68]` as MapMyVisitors' `unknown location` placeholder, filtered it, and replaced misleading live wording with geolocated-record wording. |
 | 2026-07-19 | [merged-visitor-map](plans/2026-07-19-13-merged-visitor-map.md) | E0 | done | Replaced the two-map footer with one archived historical map plus live green coordinate overlays and graceful failure behavior. |
 | 2026-07-19 | [live-visitor-map](plans/2026-07-19-12-live-visitor-globe.md) | E0 | done | Introduced the replacement live dataset and visible archive; its interim two-card layout was superseded by the merged-map plan. |
 | 2026-07-19 | [supervision-additions](plans/2026-07-19-11-supervision-additions.md) | E0 | done | Added Thanakit Rattikanchalakorn to Current and Jianing Wang to Alumni with their supplied status details. |
@@ -26,13 +31,14 @@
 | 2026-07-02 | [scaffolding](plans/2026-07-02-01-scaffolding.md) | E0 | done | **LDD bootstrap complete.** Added `docs/PROGRESS.md` and `docs/plans/2026-07-02-01-scaffolding.md`. Project is a plain static GitHub Pages site; no build/test pipeline exists. |
 
 ## Next Steps
-- **Immediate:** Monitor the published merged visitor map to confirm live green locations continue updating alongside the preserved historical dots.
+- **Immediate:** Publish all scoped homepage and feedback-page changes in the prepared branch, then verify the draft PR.
 - **Before any future code/content change:** Create a new dated plan under `docs/plans/` and add it to this index.
 - **Likely next useful plan:** Add a lightweight static-site verification workflow for HTML/link checks and manual browser smoke testing.
 - **Content update reminder:** When publications change, update both the selected and full publication lists, any linked `bibs/*.html` entry, relevant `data/` PDFs, and the news section if applicable.
 
 ## Known Issues
-- The original ClustrMaps domain remains unavailable, and its raw dataset cannot be imported into MapMyVisitors. The footer performs a presentation-layer merge instead: the archived record through 23 February 2026 remains the map base, with live MapMyVisitors coordinates since 19 July 2026 overlaid in green. Provider-side counts remain separate.
+- The original ClustrMaps domain remains unavailable, and its raw dataset cannot be imported into MapMyVisitors. The footer performs a presentation-layer merge instead: the archived record through 23 February 2026 remains the map base, with genuinely geolocated MapMyVisitors coordinates recorded since 19 July 2026 overlaid in green. Provider-side counts remain separate.
+- MapMyVisitors currently reports all replacement-dataset visits as `unknown location` at its fixed `[28, -68]` placeholder and exposes no nonzero incremental hit ID. The page now suppresses that false marker and will show green markers only when the provider supplies real coordinates; truly real-time online-presence tracking is not available from this static third-party widget.
 - No automated validation currently exists for internal links, external links, or HTML consistency; verify manually after content updates.
 - Publication metadata is duplicated across selected and full lists in `index.html`, so updates can drift unless both places are checked.
 
@@ -46,6 +52,31 @@
 | LDD | Keep durable project state in `docs/PROGRESS.md`; create a dated plan before future implementation or content edits. |
 
 ## Session Log
+
+### 2026-07-22
+- **Focus:** COMP3050 feedback-rating refinement.
+- **Completed:** Removed the Constructive Guidance 4.7/5 card and all public mention of that score; retained the three selected 4.8/5 indicator cards and updated the method note accordingly.
+- **Tests:** Confirmed exactly three rating cards, all at 4.8/5; confirmed neither `4.7` nor `Constructive guidance` remains in the page; `git diff --check` passed.
+- **Files:** `html/comp3050-feedback-2026s1.html`, `docs/plans/2026-07-22-05-remove-feedback-4-7.md`, `docs/PROGRESS.md`.
+- **Blockers:** None.
+
+- **Focus:** Collapsible supervision presentation.
+- **Completed:** Converted Current and Alumni into independent native disclosure controls with visible counts; kept Current expanded and Alumni collapsed by default; preserved all 19 entries and Ruijun Feng's requested ordering.
+- **Tests:** Confirmed two disclosure groups, default open/closed states, Current/Alumni counts of 13/6, Ruijun Feng ordering, inline JavaScript syntax, and `git diff --check`.
+- **Files:** `index.html`, `docs/plans/2026-07-22-04-collapsible-supervision.md`, `docs/PROGRESS.md`.
+- **Blockers:** None.
+
+- **Focus:** Current supervision addition.
+- **Completed:** Added Ruijun Feng as a PhD student at UNSW immediately after Penghao Jiang; the Current list now contains 13 entries.
+- **Tests:** Confirmed the entry occurs exactly once and is ordered between Penghao Jiang and Jiawei Wang; inline JavaScript syntax and `git diff --check` passed.
+- **Files:** `index.html`, `docs/plans/2026-07-22-03-ruijun-feng-supervision.md`, `docs/PROGRESS.md`.
+- **Blockers:** None.
+
+- **Focus:** False visitor-map marker correction and temporary Tools-section removal.
+- **Completed:** Confirmed the persistent `[28, -68]` point is MapMyVisitors' `unknown location` placeholder rather than a North American visitor; changed marker parsing to retain labels and suppress unknown locations; replaced `Live` wording with accurate recorded/geolocated wording and a zero-location state while preserving 30-second refresh for valid future coordinates. Commented out the Tools navigation and full section without deleting them, then shifted downstream backgrounds to retain white/grey alternation.
+- **Tests:** The current provider payload contained one unknown marker and zero geolocated markers; a DOM simulation rejected that placeholder and rendered a valid Sydney coordinate; inline JavaScript syntax passed; active HTML after comment removal contains no Tools link/section; HTML comment counts balance; local homepage returned HTTP 200; `git diff --check` passed.
+- **Files:** `index.html`, `docs/plans/2026-07-22-01-visitor-map-unknown-location.md`, `docs/plans/2026-07-22-02-hide-tools-section.md`, `docs/PROGRESS.md`.
+- **Blockers:** MapMyVisitors currently supplies no real geolocation for this dataset, so the page cannot show a green point until the provider records a mappable visit.
 
 ### 2026-07-19
 - **Focus:** Single-map historical/live visitor merge.

@@ -145,6 +145,32 @@
     font-size: 11px;
   }
 
+  .supervision-group {
+    margin: 6px 0 10px;
+  }
+
+  .supervision-group summary {
+    width: fit-content;
+    padding: 3px 0;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .supervision-group summary::marker {
+    color: #7b848c;
+  }
+
+  .supervision-group-count {
+    color: #7b848c;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .supervision-group ul {
+    margin-top: 5px;
+  }
+
   .site-credit {
     margin: 12px 0 0;
     color: #8a929a;
@@ -176,7 +202,7 @@
     <a href="#service" class="w3-bar-item w3-button">Services</a>
     <a href="#teaching" class="w3-bar-item w3-button">Teaching</a>
     <a href="#supervision" class="w3-bar-item w3-button">Supervision</a>
-    <a href="#tools" class="w3-bar-item w3-button">Tools</a>
+    <!-- <a href="#tools" class="w3-bar-item w3-button">Tools</a> -->
     <a href="#edu" class="w3-bar-item w3-button">Education</a>
     <a href="#award" class="w3-bar-item w3-button">Grants & Awards</a>
     <a href="#misc" class="w3-bar-item w3-button">Misc</a>
@@ -420,34 +446,39 @@
   <!-- The Supervision Section -->
   <div class="w3-container" id="supervision" style="padding-bottom: 10px">
     <h3>Supervision</h3>
-    <h4>Current</h4>
-    <ul style="padding-left: 2em;">
-      <li><strong>Mingxiu Wang</strong> (MRes at MQ).</li>
-      <li><strong>Weixian Qian</strong> (PhD at MQ).</li>
-      <li><strong>Suhaas Gambhir</strong> (MRes + PhD at MQ).</li>
-      <li><strong>Debashish Kumar</strong> (MRes at MQ).</li>
-      <li><strong>Zexin Zhong</strong> (PhD at UTS).</li>
-      <li><strong>Weigang He</strong> (PhD at UTS).</li>
-      <li><strong>Penghao Jiang</strong> (PhD at UNSW).</li>
-      <li><strong>Jiawei Wang</strong> (PhD at UNSW).</li>
-      <li><strong>Jiawei Yang</strong> (PhD at UNSW).</li>
-      <li><strong>Shangzhi Xu</strong> (PhD at UNSW + Data'61).</li>
-      <li><strong>Zhihao Guo</strong> (PhD at UTS).</li>
-      <li><strong>Thanakit Rattikanchalakorn</strong> (Summer Research Student).</li>
-    </ul>
+    <details class="supervision-group" open>
+      <summary>Current <span class="supervision-group-count">(13)</span></summary>
+      <ul style="padding-left: 2em;">
+        <li><strong>Mingxiu Wang</strong> (MRes at MQ).</li>
+        <li><strong>Weixian Qian</strong> (PhD at MQ).</li>
+        <li><strong>Suhaas Gambhir</strong> (MRes + PhD at MQ).</li>
+        <li><strong>Debashish Kumar</strong> (MRes at MQ).</li>
+        <li><strong>Zexin Zhong</strong> (PhD at UTS).</li>
+        <li><strong>Weigang He</strong> (PhD at UTS).</li>
+        <li><strong>Penghao Jiang</strong> (PhD at UNSW).</li>
+        <li><strong>Ruijun Feng</strong> (PhD at UNSW).</li>
+        <li><strong>Jiawei Wang</strong> (PhD at UNSW).</li>
+        <li><strong>Jiawei Yang</strong> (PhD at UNSW).</li>
+        <li><strong>Shangzhi Xu</strong> (PhD at UNSW + Data'61).</li>
+        <li><strong>Zhihao Guo</strong> (PhD at UTS).</li>
+        <li><strong>Thanakit Rattikanchalakorn</strong> (Summer Research Student).</li>
+      </ul>
+    </details>
 
-    <h4>Alumni</h4>
-    <ul style="padding-left: 2em;">
-      <li><strong>Haodong Li</strong> (PhD at BUPT).</li>
-      <li><strong>Shuangxiang Kan</strong> (PhD at UNSW, now Postdoc at SMU).</li>
-      <li><strong>Jiawei Ren</strong> (PhD at UNSW).</li>
-      <li><strong>Jiahao Zhang</strong> (MPhil at UNSW).</li>
-      <li><strong>Linfeng Liang</strong> (PhD at MQ).</li>
-      <li><strong>Jianing Wang</strong> (Undergraduate student, now PhD at Monash).</li>
-    </ul>
+    <details class="supervision-group">
+      <summary>Alumni <span class="supervision-group-count">(6)</span></summary>
+      <ul style="padding-left: 2em;">
+        <li><strong>Haodong Li</strong> (PhD at BUPT).</li>
+        <li><strong>Shuangxiang Kan</strong> (PhD at UNSW, now Postdoc at SMU).</li>
+        <li><strong>Jiawei Ren</strong> (PhD at UNSW).</li>
+        <li><strong>Jiahao Zhang</strong> (MPhil at UNSW).</li>
+        <li><strong>Linfeng Liang</strong> (PhD at MQ).</li>
+        <li><strong>Jianing Wang</strong> (Undergraduate student, now PhD at Monash).</li>
+      </ul>
+    </details>
   </div>
 
-  <!-- The Tool Section -->
+  <!-- The Tool Section (temporarily hidden)
   <div class="w3-container w3-light-grey" id="tools" style="padding-bottom: 10px">
     <h3>Tools</h3>
     <ul style="padding-left: 2em;">
@@ -455,9 +486,10 @@
      <li> Creator, <a href="https://github.com/jumormt/DeepWukong">DeepWukong</a><img src="https://img.shields.io/github/stars/jumormt/DeepWukong">, a graph neural network based software vulnerability detector.</li>
     </ul>
   </div>
+  -->
 
   <!-- The Education Section -->
-  <div class="w3-container" id="edu" style="padding-bottom: 10px">
+  <div class="w3-container w3-light-grey" id="edu" style="padding-bottom: 10px">
     <h3>Education</h3>
     <ul style="padding-left: 2em;">
     <li> 2021-2024, Ph.D. in Computer Science and Engineering, <a href="https://www.unsw.edu.au/homepage/">University of New South Wales (UNSW)</a>.
@@ -466,7 +498,7 @@
   </div>  
 
   <!-- The Awards Section -->
-  <div class="w3-container w3-light-grey" id="award" style="padding-bottom: 10px">
+  <div class="w3-container" id="award" style="padding-bottom: 10px">
     <h3>Grants & Awards</h3>
     <ul style="padding-left: 2em;">
 	  <li>2026, <a href="https://pldi26.sigplan.org/track/pldi-2026-pldi-research-artifacts">PLDI 2026 Distinguished Artifact Evaluation Reviewer Award</a>.</li>
@@ -487,7 +519,7 @@
 
 
   <!-- The Misc Section -->
-  <div class="w3-container" id="misc" style="padding-bottom: 10px">
+  <div class="w3-container w3-light-grey" id="misc" style="padding-bottom: 10px">
     <h3>Misc</h3>
     <ul style="padding-left: 2em;">
     <li> <a href="http://www.cs.wisc.edu/wpis/talks/WritingResearchPapers.pptx">Tips on writing a research paper</a>, <a href="data/research-tips-zhendongsu.pdf">Doing Research in Software Analysis Lessons and Tips</a>.</li>
@@ -504,18 +536,18 @@
 
       <div class="visitor-map-card">
         <a class="visitor-merged-map" href="https://web.archive.org/web/20260223125538/https://clustrmaps.com/map_v2.png?d=HA1rasF4Ps-g80mwIHPsyroDFlKH7oDfpAJDT-R0J8U&amp;cl=ffffff" title="Open the preserved historical visitor map">
-          <img src="https://web.archive.org/web/20260223125538id_/https://clustrmaps.com/map_v2.png?d=HA1rasF4Ps-g80mwIHPsyroDFlKH7oDfpAJDT-R0J8U&amp;cl=ffffff" alt="Visitor map with historical locations through 23 February 2026 and live locations since 19 July 2026">
+          <img src="https://web.archive.org/web/20260223125538id_/https://clustrmaps.com/map_v2.png?d=HA1rasF4Ps-g80mwIHPsyroDFlKH7oDfpAJDT-R0J8U&amp;cl=ffffff" alt="Visitor map with historical locations through 23 February 2026 and geolocated visits recorded since 19 July 2026">
           <div class="visitor-live-layer" id="visitor-live-layer" aria-hidden="true"></div>
         </a>
 
         <div class="visitor-map-legend" aria-label="Visitor map legend">
           <span><i class="visitor-legend-dot is-history" aria-hidden="true"></i>Historical</span>
-          <span><i class="visitor-legend-dot is-live" aria-hidden="true"></i>Live</span>
+          <span><i class="visitor-legend-dot is-live" aria-hidden="true"></i>Since Jul 2026</span>
         </div>
       </div>
 
-      <p class="visitor-map-status" id="visitor-map-status">
-        Historical through 23 February 2026 &middot; <a href="https://mapmyvisitors.com/web/1c6os">live since 19 July 2026</a>
+      <p class="visitor-map-status" id="visitor-map-status" aria-live="polite">
+        Historical through 23 February 2026 &middot; checking recent locations
       </p>
 
       <span id="busuanzi_container_site_pv" style="display:none">
@@ -573,7 +605,7 @@ new Vue({
 
   function showLiveUnavailable() {
     status.classList.add("is-error");
-    status.innerHTML = "Historical record shown &middot; live layer temporarily unavailable";
+    status.innerHTML = "Historical record shown &middot; recent location data temporarily unavailable";
   }
 
   function renderLocations() {
@@ -593,17 +625,25 @@ new Vue({
     });
 
     status.classList.remove("is-error");
+    if (!coordinates.length) {
+      status.innerHTML = "Historical through 23 February 2026 &middot; "
+        + "<a href=\"https://mapmyvisitors.com/web/1c6os\">no geolocated visits recorded yet</a>";
+      return;
+    }
+
     status.innerHTML = "Historical through 23 February 2026 &middot; "
       + "<a href=\"https://mapmyvisitors.com/web/1c6os\">"
-      + coordinates.length + " live location" + (coordinates.length === 1 ? "" : "s")
-      + " since 19 July 2026</a>";
+      + coordinates.length + " geolocated visitor location" + (coordinates.length === 1 ? "" : "s")
+      + " recorded since 19 July 2026</a>";
   }
 
   function collectLocations(source) {
-    var coordinatePattern = /latLng:\s*\[\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\]/g;
+    var coordinatePattern = /latLng:\s*\[\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\]\s*,\s*name:\s*"([^"]*)"/g;
     var match;
 
     while ((match = coordinatePattern.exec(source)) !== null) {
+      if (/unknown location/i.test(match[3])) continue;
+
       locations[match[1] + "," + match[2]] = {
         latitude: Number(match[1]),
         longitude: Number(match[2])
@@ -652,7 +692,7 @@ new Vue({
     initialHitId = initialHitMatch[1];
     lastHitId = lastHitMatch[1];
     collectLocations(source);
-    if (Object.keys(locations).length) renderLocations();
+    renderLocations();
     requestLiveMarkers(true);
   };
 
