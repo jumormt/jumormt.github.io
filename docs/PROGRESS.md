@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-07-23 | [remove-jss-selected-publication](plans/2026-07-23-01-remove-jss-selected-publication.md) | E0 | done | Removed Jiahao Zhang's JSS `[J5]` from Selected Publications; retained its full-list record, Research Directions link, and BibTeX metadata. |
 | 2026-07-22 | [remove-feedback-4-7](plans/2026-07-22-05-remove-feedback-4-7.md) | E0 | done | Removed the Constructive Guidance 4.7/5 card and retained only the three selected 4.8/5 indicators. |
 | 2026-07-22 | [collapsible-supervision](plans/2026-07-22-04-collapsible-supervision.md) | E0 | done | Converted Current and Alumni into native collapsible groups with entry counts; Current opens by default and Alumni starts closed. |
 | 2026-07-22 | [ruijun-feng-supervision](plans/2026-07-22-03-ruijun-feng-supervision.md) | E0 | done | Added Ruijun Feng as a current PhD student at UNSW immediately after Penghao Jiang. |
@@ -52,6 +53,13 @@
 | LDD | Keep durable project state in `docs/PROGRESS.md`; create a dated plan before future implementation or content edits. |
 
 ## Session Log
+
+### 2026-07-23
+- **Focus:** JSS selected-publication removal.
+- **Completed:** Removed Jiahao Zhang's JSS `[J5]` from the homepage Selected Publications list and promoted `[C16]` to the first 2026 item without extra top spacing; preserved the full-list record, Research Directions link, and BibTeX metadata.
+- **Tests:** Confirmed `[J5]` is absent from the active selected block and retained in the intended supporting locations; inline JavaScript syntax and `git diff --check` passed.
+- **Files:** `index.html`, `docs/plans/2026-07-23-01-remove-jss-selected-publication.md`, `docs/PROGRESS.md`.
+- **Blockers:** None.
 
 ### 2026-07-22
 - **Focus:** COMP3050 feedback-rating refinement.
