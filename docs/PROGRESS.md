@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-07-24 | [visitor-count-only](plans/2026-07-24-01-visitor-count-only.md) | E0 | done | Commented out the unreliable visitor map and its MapMyVisitors integration; retained only the host-aware Busuanzi visit count. |
 | 2026-07-23 | [remove-jss-selected-publication](plans/2026-07-23-01-remove-jss-selected-publication.md) | E0 | done | Removed Jiahao Zhang's JSS `[J5]` from Selected Publications; retained its full-list record, Research Directions link, and BibTeX metadata. |
 | 2026-07-22 | [remove-feedback-4-7](plans/2026-07-22-05-remove-feedback-4-7.md) | E0 | done | Removed the Constructive Guidance 4.7/5 card and retained only the three selected 4.8/5 indicators. |
 | 2026-07-22 | [collapsible-supervision](plans/2026-07-22-04-collapsible-supervision.md) | E0 | done | Converted Current and Alumni into native collapsible groups with entry counts; Current opens by default and Alumni starts closed. |
@@ -32,14 +33,12 @@
 | 2026-07-02 | [scaffolding](plans/2026-07-02-01-scaffolding.md) | E0 | done | **LDD bootstrap complete.** Added `docs/PROGRESS.md` and `docs/plans/2026-07-02-01-scaffolding.md`. Project is a plain static GitHub Pages site; no build/test pipeline exists. |
 
 ## Next Steps
-- **Immediate:** Publish all scoped homepage and feedback-page changes in the prepared branch, then verify the draft PR.
+- **Immediate:** Verify the visitor-count-only footer after GitHub Pages deploys the `main` update.
 - **Before any future code/content change:** Create a new dated plan under `docs/plans/` and add it to this index.
 - **Likely next useful plan:** Add a lightweight static-site verification workflow for HTML/link checks and manual browser smoke testing.
 - **Content update reminder:** When publications change, update both the selected and full publication lists, any linked `bibs/*.html` entry, relevant `data/` PDFs, and the news section if applicable.
 
 ## Known Issues
-- The original ClustrMaps domain remains unavailable, and its raw dataset cannot be imported into MapMyVisitors. The footer performs a presentation-layer merge instead: the archived record through 23 February 2026 remains the map base, with genuinely geolocated MapMyVisitors coordinates recorded since 19 July 2026 overlaid in green. Provider-side counts remain separate.
-- MapMyVisitors currently reports all replacement-dataset visits as `unknown location` at its fixed `[28, -68]` placeholder and exposes no nonzero incremental hit ID. The page now suppresses that false marker and will show green markers only when the provider supplies real coordinates; truly real-time online-presence tracking is not available from this static third-party widget.
 - No automated validation currently exists for internal links, external links, or HTML consistency; verify manually after content updates.
 - Publication metadata is duplicated across selected and full lists in `index.html`, so updates can drift unless both places are checked.
 
@@ -53,6 +52,13 @@
 | LDD | Keep durable project state in `docs/PROGRESS.md`; create a dated plan before future implementation or content edits. |
 
 ## Session Log
+
+### 2026-07-24
+- **Focus:** Visitor-count-only footer.
+- **Completed:** Commented out the archived visitor-map markup and the full MapMyVisitors integration so neither the map nor its third-party requests run; retained the host-aware Busuanzi total and local-preview message as the footer's only visitor display.
+- **Tests:** Confirmed balanced HTML comments, no active map markup, disabled MapMyVisitors code, retained Busuanzi markup/loader, valid inline JavaScript, local homepage HTTP 200, and `git diff --check`.
+- **Files:** `index.html`, `docs/plans/2026-07-24-01-visitor-count-only.md`, `docs/PROGRESS.md`.
+- **Blockers:** None.
 
 ### 2026-07-23
 - **Focus:** JSS selected-publication removal.

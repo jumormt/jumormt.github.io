@@ -25,7 +25,7 @@
     border-top: 1px solid #e5e5e5;
   }
 
-  .visitor-map-block {
+  .visitor-count-block {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -528,7 +528,8 @@
   </div>
 
   <footer class="w3-container w3-center w3-padding-24 visitor-footer">
-    <section class="visitor-map-block" aria-labelledby="visitor-map-heading">
+    <section class="visitor-count-block">
+      <!-- Visitor map disabled on 24 July 2026; the visit counter remains active.
       <h2 class="visitor-map-title" id="visitor-map-heading">Visitors around the world</h2>
 
       <div class="visitor-map-card">
@@ -546,6 +547,7 @@
       <p class="visitor-map-status" id="visitor-map-status" aria-live="polite">
         Historical through 23 February 2026 &middot; checking recent locations
       </p>
+      -->
 
       <span id="busuanzi_container_site_pv" style="display:none">
         <span class="visitor-count">
@@ -574,6 +576,10 @@ new Vue({
   el: '#pub-timeline',
   data: { s26: true, s25: true, s24: true, s22: true, s20: true }
 });
+
+/*
+Visitor map disabled on 24 July 2026. The integration is preserved for reference
+but must not execute or request MapMyVisitors resources.
 
 // Keep the archived visitor dots as the base and overlay current live coordinates.
 (function renderMergedVisitorMap() {
@@ -700,6 +706,7 @@ new Vue({
     showLiveUnavailable
   );
 })();
+*/
 
 // Accordion
 function myAccFunc() {
