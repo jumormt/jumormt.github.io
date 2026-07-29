@@ -2,7 +2,7 @@
 
 ## Goal
 
-Promote the two newly accepted ASE 2026 papers from the standalone Full Publication List to the homepage Selected Publications list, and update the homepage biography to reflect both ASE coverage and first-/corresponding-author publications across ICSE, FSE, ASE, and ISSTA.
+Promote the two newly accepted ASE 2026 papers from the standalone Full Publication List to the homepage Selected Publications list, add them to the relevant Research Directions, and update the homepage biography to reflect both ASE coverage and first-/corresponding-author publications across ICSE, FSE, ASE, and ISSTA.
 
 ## Approved Content Design
 
@@ -13,6 +13,12 @@ Promote the two newly accepted ASE 2026 papers from the standalone Full Publicat
 - Copy titles, author orders, corresponding-author annotations, `CORE-A*`/`CCF-A` labels, and ASE research-track links from the Full Publication List.
 - Use homepage-relative links and do not add unavailable PDF, slides, or BibTeX links.
 - Leave the Full Publication List and News entries unchanged.
+
+### Research Directions
+
+- Add RamFuzz `[C18]` to both `Memory safety` and `Dynamic testing` because it uses greybox fuzzing to detect spatial memory corruption.
+- Add Harnessing Uncertainty `[C19]` to `Vulnerability detection`.
+- Link all three references to the homepage Selected Publications section.
 
 ### Biography
 
@@ -26,6 +32,7 @@ Keep the existing distinguished-paper-award clause immediately after these sente
 
 - `[C18]` and `[C19]` each appear once in Selected Publications and once in the Full Publication List.
 - Both Selected entries match the corresponding Full List metadata.
+- Research Directions lists `[C18]` under both `Memory safety` and `Dynamic testing`, and `[C19]` under `Vulnerability detection`.
 - The biography names ASE and includes the approved four-conference authorship statement exactly once.
 - The homepage responds successfully in a local preview.
 - `git diff --check` passes.
