@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-07-29 | [remove-ase-selected](plans/2026-07-29-03-remove-ase-selected.md) | E0 | done | Removed `[C18]`/`[C19]` from Selected Publications; retained Full List, News, biography, and Research Directions coverage; retargeted their topic links to ASE 2026. |
 | 2026-07-29 | [selected-ase-biography](plans/2026-07-29-02-selected-ase-biography.md) | E0 | done | Promoted `[C18]`/`[C19]` to Selected Publications; mapped `[C18]` to Memory safety/Dynamic testing and `[C19]` to Vulnerability detection; added ASE/four-flagship-conference authorship coverage to the biography. |
 | 2026-07-29 | [ase-2026-publications](plans/2026-07-29-01-ase-2026-publications.md) | E0 | done | Added RamFuzz `[C18]` and Harnessing Uncertainty `[C19]` to the Full List with supplied corresponding-author annotations; announced both acceptances in `07/2026` News. |
 | 2026-07-24 | [visitor-count-only](plans/2026-07-24-01-visitor-count-only.md) | E0 | done | Commented out the unreliable visitor map and its MapMyVisitors integration; retained only the host-aware Busuanzi visit count. |
@@ -35,7 +36,7 @@
 | 2026-07-02 | [scaffolding](plans/2026-07-02-01-scaffolding.md) | E0 | done | **LDD bootstrap complete.** Added `docs/PROGRESS.md` and `docs/plans/2026-07-02-01-scaffolding.md`. Project is a plain static GitHub Pages site; no build/test pipeline exists. |
 
 ## Next Steps
-- **Immediate:** Verify the Selected Publications, Research Directions, and biography updates after GitHub Pages deploys the next `main` update.
+- **Immediate:** Verify the ASE Full List, News, biography, and Research Directions presentation after GitHub Pages deploys the next `main` update.
 - **Before any future code/content change:** Create a new dated plan under `docs/plans/` and add it to this index.
 - **Likely next useful plan:** Add a lightweight static-site verification workflow for HTML/link checks and manual browser smoke testing.
 - **Content update reminder:** When publications change, update both the selected and full publication lists, any linked `bibs/*.html` entry, relevant `data/` PDFs, and the news section if applicable.
@@ -56,6 +57,12 @@
 ## Session Log
 
 ### 2026-07-29
+- **Focus:** Remove the two ASE papers from Selected Publications.
+- **Completed:** Removed `[C18]` and `[C19]` from the 2026 Selected Publications list and restored `[C16]` as its first item; retained both papers in the Full List, News, biography, and Research Directions; retargeted all three Research Directions references to the ASE 2026 research-track page.
+- **Tests:** Confirmed both papers are absent from Selected and retained in Full, Research Directions counts/links are correct, News and biography are unchanged, local homepage HTTP 200, ASE page HTTP 200, and `git diff --check`.
+- **Files:** `index.html`, `docs/plans/2026-07-29-03-remove-ase-selected.md`, `docs/PROGRESS.md`.
+- **Blockers:** None.
+
 - **Focus:** Selected ASE publications, Research Directions, and biography coverage.
 - **Completed:** Promoted RamFuzz `[C18]` and Harnessing Uncertainty `[C19]` to the 2026 Selected Publications list; added `[C18]` to Memory safety and Dynamic testing and `[C19]` to Vulnerability detection; added ASE to the biography venue list and stated first-/corresponding-author coverage across ICSE, FSE, ASE, and ISSTA.
 - **Tests:** Confirmed Selected/Full metadata equality, intended Research Directions counts and mappings, exact biography wording, preserved FSE award link, unchanged News and Full List, local homepage HTTP 200, and `git diff --check`.
