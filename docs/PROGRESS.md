@@ -37,7 +37,7 @@
 | 2026-07-02 | [scaffolding](plans/2026-07-02-01-scaffolding.md) | E0 | done | **LDD bootstrap complete.** Added `docs/PROGRESS.md` and `docs/plans/2026-07-02-01-scaffolding.md`. Project is a plain static GitHub Pages site; no build/test pipeline exists. |
 
 ## Next Steps
-- **Immediate:** Verify the three new publication PDF links after GitHub Pages deploys the next `main` update.
+- **Immediate:** None; the three publication PDFs and their page links are live and verified.
 - **Before any future code/content change:** Create a new dated plan under `docs/plans/` and add it to this index.
 - **Likely next useful plan:** Add a lightweight static-site verification workflow for HTML/link checks and manual browser smoke testing.
 - **Content update reminder:** When publications change, update both the selected and full publication lists, any linked `bibs/*.html` entry, relevant `data/` PDFs, and the news section if applicable.
@@ -60,7 +60,7 @@
 ### 2026-07-30
 - **Focus:** Upload three user-supplied publication PDFs.
 - **Completed:** Added stable local assets for Jiahao Zhang's JSS `[J5]`, Jiawei Yang's ISSTA `[C16]`, and MalTotal `[C17]`; linked all three from Research Directions and the Full List; added `[C16]` to its existing Selected Publication entry without selecting `[J5]` or `[C17]`.
-- **Tests:** Confirmed PDF titles and page counts (18/22/24), visually inspected newly rendered first pages, matched source/destination and served-content SHA-256 checksums, received HTTP 200 with `application/pdf` for all assets, confirmed exact link counts and Selected scope, and passed `git diff --check`.
+- **Tests:** Confirmed PDF titles and page counts (18/22/24), visually inspected newly rendered first pages, matched source/destination and local/production served-content SHA-256 checksums, confirmed exact link counts and Selected scope, passed `git diff --check`, and verified successful GitHub Pages run `30532387461` with all three live PDF URLs returning HTTP 200 and `application/pdf`.
 - **Files:** `data/jss26_fspta.pdf`, `data/issta26_mosps.pdf`, `data/issta26_maltotal.pdf`, `index.html`, `html/publications.html`, `docs/plans/2026-07-30-01-upload-publication-pdfs.md`, `docs/PROGRESS.md`.
 - **Blockers:** None.
 

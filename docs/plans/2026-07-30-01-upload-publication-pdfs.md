@@ -51,5 +51,6 @@ Publish the user-supplied PDFs for Jiahao Zhang's JSS 2026 paper, Jiawei Yang's 
 - [x] `[J5]` and `[C17]` have PDF buttons in the Full List only.
 - [x] Relevant Research Directions links target the matching local PDFs.
 - [x] Existing DOI, Page, Slides, and BibTeX links remain intact.
+- [x] GitHub Pages deployment completed successfully and all three production PDF URLs return the expected files.
 - [x] `git diff --check` passes.
 - [x] `docs/PROGRESS.md` is updated with results.
