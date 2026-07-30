@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-07-30 | [upload-publication-pdfs](plans/2026-07-30-01-upload-publication-pdfs.md) | E0 | done | Published verified local PDFs for JSS `[J5]`, ISSTA `[C16]`, and MalTotal `[C17]`; synchronized Research Directions, Selected `[C16]`, and all three Full List entries. |
 | 2026-07-29 | [remove-ase-selected](plans/2026-07-29-03-remove-ase-selected.md) | E0 | done | Removed `[C18]`/`[C19]` from Selected Publications; retained Full List, News, biography, and Research Directions coverage; retargeted their topic links to ASE 2026. |
 | 2026-07-29 | [selected-ase-biography](plans/2026-07-29-02-selected-ase-biography.md) | E0 | done | Promoted `[C18]`/`[C19]` to Selected Publications; mapped `[C18]` to Memory safety/Dynamic testing and `[C19]` to Vulnerability detection; added ASE/four-flagship-conference authorship coverage to the biography. |
 | 2026-07-29 | [ase-2026-publications](plans/2026-07-29-01-ase-2026-publications.md) | E0 | done | Added RamFuzz `[C18]` and Harnessing Uncertainty `[C19]` to the Full List with supplied corresponding-author annotations; announced both acceptances in `07/2026` News. |
@@ -36,7 +37,7 @@
 | 2026-07-02 | [scaffolding](plans/2026-07-02-01-scaffolding.md) | E0 | done | **LDD bootstrap complete.** Added `docs/PROGRESS.md` and `docs/plans/2026-07-02-01-scaffolding.md`. Project is a plain static GitHub Pages site; no build/test pipeline exists. |
 
 ## Next Steps
-- **Immediate:** Verify the ASE Full List, News, biography, and Research Directions presentation after GitHub Pages deploys the next `main` update.
+- **Immediate:** Verify the three new publication PDF links after GitHub Pages deploys the next `main` update.
 - **Before any future code/content change:** Create a new dated plan under `docs/plans/` and add it to this index.
 - **Likely next useful plan:** Add a lightweight static-site verification workflow for HTML/link checks and manual browser smoke testing.
 - **Content update reminder:** When publications change, update both the selected and full publication lists, any linked `bibs/*.html` entry, relevant `data/` PDFs, and the news section if applicable.
@@ -55,6 +56,13 @@
 | LDD | Keep durable project state in `docs/PROGRESS.md`; create a dated plan before future implementation or content edits. |
 
 ## Session Log
+
+### 2026-07-30
+- **Focus:** Upload three user-supplied publication PDFs.
+- **Completed:** Added stable local assets for Jiahao Zhang's JSS `[J5]`, Jiawei Yang's ISSTA `[C16]`, and MalTotal `[C17]`; linked all three from Research Directions and the Full List; added `[C16]` to its existing Selected Publication entry without selecting `[J5]` or `[C17]`.
+- **Tests:** Confirmed PDF titles and page counts (18/22/24), visually inspected newly rendered first pages, matched source/destination and served-content SHA-256 checksums, received HTTP 200 with `application/pdf` for all assets, confirmed exact link counts and Selected scope, and passed `git diff --check`.
+- **Files:** `data/jss26_fspta.pdf`, `data/issta26_mosps.pdf`, `data/issta26_maltotal.pdf`, `index.html`, `html/publications.html`, `docs/plans/2026-07-30-01-upload-publication-pdfs.md`, `docs/PROGRESS.md`.
+- **Blockers:** None.
 
 ### 2026-07-29
 - **Focus:** Remove the two ASE papers from Selected Publications.
