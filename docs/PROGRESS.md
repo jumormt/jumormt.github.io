@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-08-28 | [supervision-homepage-links](plans/2026-08-28-01-supervision-homepage-links.md) | E0 | approved | Add verified personal-homepage links for Jiawei Yang, Shuangxiang Kan, Jiawei Ren, and Wei Song while preserving existing content and counts. |
 | 2026-07-30 | [upload-publication-pdfs](plans/2026-07-30-01-upload-publication-pdfs.md) | E0 | done | Published verified local PDFs for JSS `[J5]`, ISSTA `[C16]`, and MalTotal `[C17]`; synchronized Research Directions, Selected `[C16]`, and all three Full List entries. |
 | 2026-07-29 | [remove-ase-selected](plans/2026-07-29-03-remove-ase-selected.md) | E0 | done | Removed `[C18]`/`[C19]` from Selected Publications; retained Full List, News, biography, and Research Directions coverage; retargeted their topic links to ASE 2026. |
 | 2026-07-29 | [selected-ase-biography](plans/2026-07-29-02-selected-ase-biography.md) | E0 | done | Promoted `[C18]`/`[C19]` to Selected Publications; mapped `[C18]` to Memory safety/Dynamic testing and `[C19]` to Vulnerability detection; added ASE/four-flagship-conference authorship coverage to the biography. |
@@ -37,7 +38,7 @@
 | 2026-07-02 | [scaffolding](plans/2026-07-02-01-scaffolding.md) | E0 | done | **LDD bootstrap complete.** Added `docs/PROGRESS.md` and `docs/plans/2026-07-02-01-scaffolding.md`. Project is a plain static GitHub Pages site; no build/test pipeline exists. |
 
 ## Next Steps
-- **Immediate:** None; the three publication PDFs and their page links are live and verified.
+- **Immediate:** Execute `2026-08-28-01-supervision-homepage-links.md`, starting with Task 1 pre-change checks.
 - **Before any future code/content change:** Create a new dated plan under `docs/plans/` and add it to this index.
 - **Likely next useful plan:** Add a lightweight static-site verification workflow for HTML/link checks and manual browser smoke testing.
 - **Content update reminder:** When publications change, update both the selected and full publication lists, any linked `bibs/*.html` entry, relevant `data/` PDFs, and the news section if applicable.
@@ -56,6 +57,13 @@
 | LDD | Keep durable project state in `docs/PROGRESS.md`; create a dated plan before future implementation or content edits. |
 
 ## Session Log
+
+### 2026-08-28
+- **Focus:** Plan verified homepage links for supervised students and Wei Song.
+- **Completed:** Verified the four personal sites, documented the approved link policy and exact URL/name mappings, and created the LDD implementation plan without changing site HTML.
+- **Tests:** Design and plan placeholder scans passed; documentation passed `git diff --check`.
+- **Files:** `docs/superpowers/specs/2026-08-28-supervision-homepage-links-design.md`, `docs/plans/2026-08-28-01-supervision-homepage-links.md`, `docs/PROGRESS.md`.
+- **Blockers:** None; implementation approach selection is next.
 
 ### 2026-07-30
 - **Focus:** Upload three user-supplied publication PDFs.
