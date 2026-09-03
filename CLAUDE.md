@@ -29,3 +29,17 @@ No build step. Open `index.html` in a browser to preview. Deploy by pushing to `
 - **Author annotations**: `<sup>#</sup>` = equal contribution, `<sup>*</sup>` = corresponding author. Xiao Cheng's name is always bolded with `<strong>`.
 - **Services section**: TPC memberships, AE committee roles, and reviewer roles are maintained as separate `<li>` items.
 - **Section alternation**: Sections alternate between default white background and `w3-light-grey` class for visual separation.
+
+## Agent skills
+
+### Issue tracker
+
+Issues are tracked in GitHub Issues at jumormt/jumormt.github.io. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Default label vocabulary (needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context layout (root `CONTEXT.md` + `docs/adr/`, created lazily). See `docs/agents/domain.md`.
