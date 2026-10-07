@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-10-07 | [ase-reviewer-award](plans/2026-10-07-02-ase-reviewer-award.md) | E0 | done | Added matching ASE 2026 Distinguished Reviewer Award entries to News (`10/2026`) and Grants & Awards. |
 | 2026-10-07 | [neurosymland-publication](plans/2026-10-07-01-neurosymland-publication.md) | E0 | done | Added matching IROS 2026 `[C20]` entries to Selected and Full Publications with CORE-A and Best Paper Candidate badges. |
 | 2026-08-28 | [supervision-homepage-links](plans/2026-08-28-01-supervision-homepage-links.md) | E0 | done | Linked verified personal homepages for Jiawei Yang, Shuangxiang Kan, and Jiawei Ren in Supervision and Wei Song in both active RamFuzz mentions. |
 | 2026-07-30 | [upload-publication-pdfs](plans/2026-07-30-01-upload-publication-pdfs.md) | E0 | done | Published verified local PDFs for JSS `[J5]`, ISSTA `[C16]`, and MalTotal `[C17]`; synchronized Research Directions, Selected `[C16]`, and all three Full List entries. |
@@ -39,7 +40,7 @@
 | 2026-07-02 | [scaffolding](plans/2026-07-02-01-scaffolding.md) | E0 | done | **LDD bootstrap complete.** Added `docs/PROGRESS.md` and `docs/plans/2026-07-02-01-scaffolding.md`. Project is a plain static GitHub Pages site; no build/test pipeline exists. |
 
 ## Next Steps
-- **Immediate:** None; NEUROSYMLAND is added to both publication lists and checked.
+- **Immediate:** None; NEUROSYMLAND and the ASE reviewer award updates are complete and checked.
 - **Before any future code/content change:** Create a new dated plan under `docs/plans/` and add it to this index.
 - **Likely next useful plan:** Add a lightweight static-site verification workflow for HTML/link checks and manual browser smoke testing.
 - **Content update reminder:** When publications change, update both the selected and full publication lists, any linked `bibs/*.html` entry, relevant `data/` PDFs, and the news section if applicable.
@@ -60,6 +61,12 @@
 ## Session Log
 
 ### 2026-10-07
+- **Focus:** Add the user-reported ASE 2026 Distinguished Reviewer Award.
+- **Completed:** Added a `10/2026` News announcement after pinned items and a separate 2026 Grants & Awards entry, using the exact supplied award name.
+- **Verification:** Inspected HTML diff; confirmed one matching entry in each section, correct ordering/date, existing news image, and passing `git diff --check`. No new links; no browser visual check performed.
+- **Files:** `index.html`, `docs/plans/2026-10-07-02-ase-reviewer-award.md`, `docs/PROGRESS.md`.
+- **Blockers:** None. Award information supplied by the user; News uses the current announcement month.
+
 - **Focus:** Add the user-supplied NEUROSYMLAND IROS 2026 paper.
 - **Completed:** Added `[C20]` at the top of both 2026 lists with CORE-A and Best Paper Candidate badges; preserved author order, bolded Xiao Cheng, and marked Xi Zheng as corresponding author. Normalized Sebastian Schroder's capitalization. Archived older session logs without deleting history.
 - **Verification:** Inspected the HTML diff; confirmed exactly one active `[C20]` per page and identical entries after whitespace normalization; `git diff --check` passed. No new links or assets. No browser visual check performed.
