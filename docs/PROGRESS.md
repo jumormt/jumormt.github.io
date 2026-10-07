@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-10-07 | [neurosymland-author-links](plans/2026-10-07-03-neurosymland-author-links.md) | E0 | done | Added five verified coauthor links to each `[C20]` entry; Weixian Qian and Tianyi Yang remain unlinked pending verified URLs. |
 | 2026-10-07 | [ase-reviewer-award](plans/2026-10-07-02-ase-reviewer-award.md) | E0 | done | Added matching ASE 2026 Distinguished Reviewer Award entries to News (`10/2026`) and Grants & Awards. |
 | 2026-10-07 | [neurosymland-publication](plans/2026-10-07-01-neurosymland-publication.md) | E0 | done | Added matching IROS 2026 `[C20]` entries to Selected and Full Publications with CORE-A and Best Paper Candidate badges. |
 | 2026-08-28 | [supervision-homepage-links](plans/2026-08-28-01-supervision-homepage-links.md) | E0 | done | Linked verified personal homepages for Jiawei Yang, Shuangxiang Kan, and Jiawei Ren in Supervision and Wei Song in both active RamFuzz mentions. |
@@ -40,7 +41,7 @@
 | 2026-07-02 | [scaffolding](plans/2026-07-02-01-scaffolding.md) | E0 | done | **LDD bootstrap complete.** Added `docs/PROGRESS.md` and `docs/plans/2026-07-02-01-scaffolding.md`. Project is a plain static GitHub Pages site; no build/test pipeline exists. |
 
 ## Next Steps
-- **Immediate:** None; NEUROSYMLAND and the ASE reviewer award updates are complete and checked.
+- **Immediate:** Five verified NEUROSYMLAND coauthor links are complete. Add Weixian Qian and Tianyi Yang homepage URLs if supplied or reliably identified.
 - **Before any future code/content change:** Create a new dated plan under `docs/plans/` and add it to this index.
 - **Likely next useful plan:** Add a lightweight static-site verification workflow for HTML/link checks and manual browser smoke testing.
 - **Content update reminder:** When publications change, update both the selected and full publication lists, any linked `bibs/*.html` entry, relevant `data/` PDFs, and the news section if applicable.
@@ -61,6 +62,12 @@
 ## Session Log
 
 ### 2026-10-07
+- **Focus:** Correct missing NEUROSYMLAND author homepage links.
+- **Completed:** Added Sebastian Schroder, Yao Deng, Jiaohong Yao, Richard Han, and Xi Zheng links to both `[C20]` entries; retained author order, Xiao Cheng bolding, corresponding-author annotation, and all other publication metadata. Continued the user's commit/push workflow.
+- **Verification:** All five target URLs returned HTTP 200 and identifying text; both entries are identical, with five anchors each; visible text and unrelated HTML are unchanged; `git diff --check` passes. No browser visual check performed.
+- **Files:** `index.html`, `html/publications.html`, `docs/plans/2026-10-07-03-neurosymland-author-links.md`, `docs/PROGRESS.md`.
+- **Remaining:** Weixian Qian and Tianyi Yang remain plain text because their homepages could not be confidently identified; asked the user for URLs. Verified links are documented in the plan.
+
 - **Focus:** Add the user-reported ASE 2026 Distinguished Reviewer Award.
 - **Completed:** Added a `10/2026` News announcement after pinned items and a separate 2026 Grants & Awards entry, using the exact supplied award name.
 - **Verification:** Inspected HTML diff; confirmed one matching entry in each section, correct ordering/date, existing news image, and passing `git diff --check`. No new links; no browser visual check performed.
