@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-10-07 | [majordomo-catalyst-grant](plans/2026-10-07-05-majordomo-catalyst-grant.md) | E0 | done | Added MajorDomo Catalyst Grant to Grants & Awards only with four team members; year omitted pending user confirmation. |
 | 2026-10-07 | [acdict-teaching-grant](plans/2026-10-07-04-acdict-teaching-grant.md) | E0 | done | Added the August ACDICT grant to News and Grants & Awards with project title, AUD $9,613 total funding, four-university collaboration, and official scheme link. |
 | 2026-10-07 | [neurosymland-author-links](plans/2026-10-07-03-neurosymland-author-links.md) | E0 | done | Added five verified coauthor links to each `[C20]` entry; Weixian Qian and Tianyi Yang remain unlinked pending verified URLs. |
 | 2026-10-07 | [ase-reviewer-award](plans/2026-10-07-02-ase-reviewer-award.md) | E0 | done | Added matching ASE 2026 Distinguished Reviewer Award entries to News (`10/2026`) and Grants & Awards. |
@@ -42,7 +43,7 @@
 | 2026-07-02 | [scaffolding](plans/2026-07-02-01-scaffolding.md) | E0 | done | **LDD bootstrap complete.** Added `docs/PROGRESS.md` and `docs/plans/2026-07-02-01-scaffolding.md`. Project is a plain static GitHub Pages site; no build/test pipeline exists. |
 
 ## Next Steps
-- **Immediate:** None; the August 2026 ACDICT grant update is complete and verified.
+- **Immediate:** MajorDomo Catalyst Grant is added and checked; add its award year when confirmed by the user.
 - **Pending links:** Add Weixian Qian and Tianyi Yang homepage URLs if supplied or reliably identified.
 - **Before any future code/content change:** Create a new dated plan under `docs/plans/` and add it to this index.
 - **Likely next useful plan:** Add a lightweight static-site verification workflow for HTML/link checks and manual browser smoke testing.
@@ -64,6 +65,12 @@
 ## Session Log
 
 ### 2026-10-07
+- **Focus:** Add the Macquarie University MajorDomo Catalyst Grant.
+- **Completed:** Added an Awards-only internal teaching grant entry with the full project title, Ansgar Fehnker as primary contact, and Nader Hanna, Xiao Cheng, and Gunjan Chamania with their affiliations. Kept News and the existing 2025 grant unchanged.
+- **Verification:** Confirmed one exact-title entry, all four members in supplied order, role/affiliation formatting, bold Xiao Cheng, and unchanged prior HTML after removing the added line; `git diff --check` passes. No links/assets added or browser visual check performed.
+- **Files:** `index.html`, `docs/plans/2026-10-07-05-majordomo-catalyst-grant.md`, `docs/PROGRESS.md`.
+- **Remaining:** Award year was not supplied and remains omitted pending the requested clarification. No blocker for the published grant details.
+
 - **Focus:** Add the August 2026 ACDICT Learning & Teaching grant.
 - **Completed:** Added News (`08/2026`) and Grants & Awards entries with the project title, selection among four funded projects, official scheme link, AUD $9,613 total funding, four institutions, Monash project lead, and Macquarie investigators Xiao Cheng and Ansgar Fehnker.
 - **Verification:** Official URL returned HTTP 200 and confirmed the project and four grants; checked title consistency, News chronology, amount, investigator formatting, institution order, and HTML diff; `git diff --check` passed. No browser visual check performed.
