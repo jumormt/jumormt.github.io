@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-10-07 | [acdict-teaching-grant](plans/2026-10-07-04-acdict-teaching-grant.md) | E0 | done | Added the August ACDICT grant to News and Grants & Awards with project title, AUD $9,613 total funding, four-university collaboration, and official scheme link. |
 | 2026-10-07 | [neurosymland-author-links](plans/2026-10-07-03-neurosymland-author-links.md) | E0 | done | Added five verified coauthor links to each `[C20]` entry; Weixian Qian and Tianyi Yang remain unlinked pending verified URLs. |
 | 2026-10-07 | [ase-reviewer-award](plans/2026-10-07-02-ase-reviewer-award.md) | E0 | done | Added matching ASE 2026 Distinguished Reviewer Award entries to News (`10/2026`) and Grants & Awards. |
 | 2026-10-07 | [neurosymland-publication](plans/2026-10-07-01-neurosymland-publication.md) | E0 | done | Added matching IROS 2026 `[C20]` entries to Selected and Full Publications with CORE-A and Best Paper Candidate badges. |
@@ -41,7 +42,8 @@
 | 2026-07-02 | [scaffolding](plans/2026-07-02-01-scaffolding.md) | E0 | done | **LDD bootstrap complete.** Added `docs/PROGRESS.md` and `docs/plans/2026-07-02-01-scaffolding.md`. Project is a plain static GitHub Pages site; no build/test pipeline exists. |
 
 ## Next Steps
-- **Immediate:** Five verified NEUROSYMLAND coauthor links are complete. Add Weixian Qian and Tianyi Yang homepage URLs if supplied or reliably identified.
+- **Immediate:** None; the August 2026 ACDICT grant update is complete and verified.
+- **Pending links:** Add Weixian Qian and Tianyi Yang homepage URLs if supplied or reliably identified.
 - **Before any future code/content change:** Create a new dated plan under `docs/plans/` and add it to this index.
 - **Likely next useful plan:** Add a lightweight static-site verification workflow for HTML/link checks and manual browser smoke testing.
 - **Content update reminder:** When publications change, update both the selected and full publication lists, any linked `bibs/*.html` entry, relevant `data/` PDFs, and the news section if applicable.
@@ -62,6 +64,12 @@
 ## Session Log
 
 ### 2026-10-07
+- **Focus:** Add the August 2026 ACDICT Learning & Teaching grant.
+- **Completed:** Added News (`08/2026`) and Grants & Awards entries with the project title, selection among four funded projects, official scheme link, AUD $9,613 total funding, four institutions, Monash project lead, and Macquarie investigators Xiao Cheng and Ansgar Fehnker.
+- **Verification:** Official URL returned HTTP 200 and confirmed the project and four grants; checked title consistency, News chronology, amount, investigator formatting, institution order, and HTML diff; `git diff --check` passed. No browser visual check performed.
+- **Files:** `index.html`, `docs/plans/2026-10-07-04-acdict-teaching-grant.md`, `docs/PROGRESS.md`.
+- **Blockers:** None. August date, amount, institutional roles, and Ansgar Fehnker's participation come from the user's supplied project details.
+
 - **Focus:** Correct missing NEUROSYMLAND author homepage links.
 - **Completed:** Added Sebastian Schroder, Yao Deng, Jiaohong Yao, Richard Han, and Xi Zheng links to both `[C20]` entries; retained author order, Xiao Cheng bolding, corresponding-author annotation, and all other publication metadata. Continued the user's commit/push workflow.
 - **Verification:** All five target URLs returned HTTP 200 and identifying text; both entries are identical, with five anchors each; visible text and unrelated HTML are unchanged; `git diff --check` passes. No browser visual check performed.
