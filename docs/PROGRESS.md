@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-10-11 | [static-analysis-heading](plans/2026-10-11-04-static-analysis-heading.md) | E0 | done | Renamed the heading to Static Analysis and Software Verification. |
 | 2026-10-11 | [autonomous-research-scope](plans/2026-10-11-03-autonomous-research-scope.md) | E0 | done | Removed the research summary; broadened C15/C20 topics to safety testing and neuro-symbolic reasoning for autonomous systems. |
 | 2026-10-11 | [research-overview-simplification](plans/2026-10-11-02-research-overview-simplification.md) | E0 | done | Refined the biography around formal methods, integration of formal reasoning and AI, and broad AI infrastructure/neuro-symbolic/autonomous-system interests; retained Research Directions. |
 | 2026-10-11 | [research-verification](plans/2026-10-11-01-research-verification.md) | E0 | done | Added explicit software/system verification directions, C20, refined recent-paper mappings, and direct paper anchors. |
@@ -68,6 +69,13 @@
 ## Session Log
 
 ### 2026-10-11
+- **Focus:** Research heading order.
+- **Completed:** Renamed the first direction to “Static Analysis and Software Verification”.
+- **Verification:** One-line HTML diff inspected; `git diff --check` passed; all topic entries and links unchanged.
+- **Files:** `index.html`, `docs/plans/2026-10-11-04-static-analysis-heading.md`, `docs/PROGRESS.md`.
+- **Next steps:** User authorized commit and push to `main`; no remaining content edits.
+- **Blockers:** None.
+
 - **Focus:** Broaden autonomous-systems topics in Research Directions.
 - **Completed:** Removed the redundant opening sentence and replaced the specific scenario-generation and UAV landing-site labels with “Safety testing of autonomous systems” and “Neuro-symbolic reasoning for autonomous systems”. Retained the heading, embodied verification topic, and paper references.
 - **Verification:** Manual diff/exact comparison confirms only the requested text changed; all links unchanged; C15 PDF and C20 anchor verified; `git diff --check` passed.
