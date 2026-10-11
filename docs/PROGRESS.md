@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-10-11 | [research-overview-simplification](plans/2026-10-11-02-research-overview-simplification.md) | E0 | done | Refined the biography around formal methods, integration of formal reasoning and AI, and broad AI infrastructure/neuro-symbolic/autonomous-system interests; retained Research Directions. |
 | 2026-10-11 | [research-verification](plans/2026-10-11-01-research-verification.md) | E0 | done | Added explicit software/system verification directions, C20, refined recent-paper mappings, and direct paper anchors. |
 | 2026-10-07 | [majordomo-catalyst-grant](plans/2026-10-07-05-majordomo-catalyst-grant.md) | E0 | done | Added MajorDomo Catalyst Grant to Grants & Awards only with four team members and user-confirmed 2026 year; actual funding amount not yet supplied. |
 | 2026-10-07 | [acdict-teaching-grant](plans/2026-10-07-04-acdict-teaching-grant.md) | E0 | done | Added the August ACDICT grant to News and Grants & Awards with project title, AUD $9,613 total funding, four-university collaboration, and official scheme link. |
@@ -66,6 +67,13 @@
 ## Session Log
 
 ### 2026-10-11
+- **Focus:** Finalize the introductory research biography.
+- **Completed:** User approved the three-sentence biography: PL/SE/AI positioning, formal methods-based program analysis and integration of formal reasoning with AI, and interests extending to reliable AI infrastructure, neuro-symbolic AI, and trustworthy autonomous/embodied systems. Research Directions is unchanged. Intermediate revisions are preserved in the session archive.
+- **Verification:** Reviewed the final HTML diff; byte comparison confirms changes are confined to the biography research text; `git diff --check` passed.
+- **Files:** `index.html`, `docs/plans/2026-10-11-02-research-overview-simplification.md`, `docs/plans/SESSION-LOG-ARCHIVE.md`, `docs/PROGRESS.md`.
+- **Next steps:** User authorized commit and push to `main`; no remaining content edits.
+- **Blockers:** None.
+
 - **Focus:** Research Directions update for software and autonomous-system verification.
 - **Completed:** Reorganized into four groups; highlighted abstract interpretation and typestate verification; added the user-stated embodied-system verification topic and NEUROSYMLAND; moved autonomous-driving testing into the systems group; clarified RamFuzz, uncertainty estimation, program slicing, and MalTotal mappings; corrected J4's malware classification and added precise publication anchors.
 - **Verification:** All previous paper references retained; local PDFs and anchors valid; unique IDs and balanced research lists; publication metadata/selection and unrelated homepage content unchanged; manual HTML/PDF abstract review and `git diff --check` passed. No browser visual inspection performed.

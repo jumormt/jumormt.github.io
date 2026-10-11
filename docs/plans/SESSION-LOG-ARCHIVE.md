@@ -130,3 +130,40 @@ Archived on 2026-10-07 from `docs/PROGRESS.md`; all original entries below are p
 - **Tests:** Verified stale `superpowers` references are gone from the local LDD skill; no project test suite exists.
 - **Files:** `docs/PROGRESS.md`, `docs/plans/2026-07-02-01-scaffolding.md`, `/Users/xiao/.codex/skills/ldd/SKILL.md`.
 - **Blockers:** None.
+
+### 2026-10-11 — Biography revision history
+
+- **Focus:** Refine the biography's parallel research activities and extension wording.
+- **Completed:** Adopted “formal methods-based program analysis techniques” and presented the integration of formal reasoning and AI as a parallel activity; replaced “current interests include” with “research interests extend to”.
+- **Verification:** Wording inspected; byte comparison confirms Research Directions and all other homepage content are unchanged; `git diff --check` passed.
+- **Files:** `index.html`, `docs/plans/2026-10-11-02-research-overview-simplification.md`, `docs/PROGRESS.md`.
+- **Next steps:** Local revision ready for review; not committed or pushed.
+- **Blockers:** None.
+
+- **Focus:** Broaden the biography's AI research positioning.
+- **Completed:** Replaced the testing/repair/security task list with “integrating formal reasoning and AI”; removed “verification-guided” and listed reliable AI infrastructure, neuro-symbolic AI, and trustworthy autonomous/embodied systems as broad interests, per user feedback.
+- **Verification:** Reviewed final wording; byte comparison confirms all content outside the biography research introduction is unchanged; `git diff --check` passed.
+- **Files:** `index.html`, `docs/plans/2026-10-11-02-research-overview-simplification.md`, `docs/PROGRESS.md`.
+- **Next steps:** Local revision ready for review; not committed or pushed.
+- **Blockers:** None.
+
+- **Focus:** Finalize the biography method wording and add AI infrastructure interests.
+- **Completed:** Adopted the user's “formal methods-based program analysis and verification” phrasing with corrected grammar, retained its integration with AI, and added reliable AI infrastructure as a current interest alongside verification-guided neuro-symbolic AI.
+- **Verification:** Wording reviewed; byte comparison confirms only the biography research text differs from HEAD and Research Directions is unchanged; `git diff --check` passed.
+- **Files:** `index.html`, `docs/plans/2026-10-11-02-research-overview-simplification.md`, `docs/PROGRESS.md`.
+- **Next steps:** Local revision ready for review; not committed or pushed.
+- **Blockers:** None.
+
+- **Focus:** Balance accessibility with technical identity in the biography.
+- **Completed:** Revised the introduction to three sentences covering PL/SE/AI, program analysis and formal verification, and verification-guided neuro-symbolic AI for autonomous/embodied systems. The user permits coined terminology; the latter phrase describes an emerging research interest. Research Directions remains unchanged.
+- **Verification:** Reviewed wording; comparison against HEAD confirms changes are confined to the biography research text; `git diff --check` passed.
+- **Files:** `index.html`, `docs/plans/2026-10-11-02-research-overview-simplification.md`, `docs/PROGRESS.md`.
+- **Next steps:** Local revision ready for review.
+- **Blockers:** None.
+
+- **Focus:** Simplify the introductory research biography.
+- **Completed:** Replaced the technical-method inventory with two sentences about software/intelligent-system safety, software verification, AI-assisted development, and autonomous systems. Retained Research Directions exactly as in `b31a702`, following the user's clarification.
+- **Verification:** Manual wording/HTML diff review; byte-for-byte comparison confirms all homepage content outside the biography research text is unchanged; `git diff --check` passed. No browser visual inspection performed.
+- **Files:** `index.html`, `docs/plans/2026-10-11-02-research-overview-simplification.md`, `docs/PROGRESS.md`.
+- **Next steps:** Local revision ready for review.
+- **Blockers:** None.
