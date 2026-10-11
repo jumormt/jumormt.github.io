@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-10-11 | [research-verification](plans/2026-10-11-01-research-verification.md) | E0 | done | Added explicit software/system verification directions, C20, refined recent-paper mappings, and direct paper anchors. |
 | 2026-10-07 | [majordomo-catalyst-grant](plans/2026-10-07-05-majordomo-catalyst-grant.md) | E0 | done | Added MajorDomo Catalyst Grant to Grants & Awards only with four team members and user-confirmed 2026 year; actual funding amount not yet supplied. |
 | 2026-10-07 | [acdict-teaching-grant](plans/2026-10-07-04-acdict-teaching-grant.md) | E0 | done | Added the August ACDICT grant to News and Grants & Awards with project title, AUD $9,613 total funding, four-university collaboration, and official scheme link. |
 | 2026-10-07 | [neurosymland-author-links](plans/2026-10-07-03-neurosymland-author-links.md) | E0 | done | Added five verified coauthor links to each `[C20]` entry; Weixian Qian and Tianyi Yang remain unlinked pending verified URLs. |
@@ -63,6 +64,21 @@
 | LDD | Keep durable project state in `docs/PROGRESS.md`; create a dated plan before future implementation or content edits. |
 
 ## Session Log
+
+### 2026-10-11
+- **Focus:** Research Directions update for software and autonomous-system verification.
+- **Completed:** Reorganized into four groups; highlighted abstract interpretation and typestate verification; added the user-stated embodied-system verification topic and NEUROSYMLAND; moved autonomous-driving testing into the systems group; clarified RamFuzz, uncertainty estimation, program slicing, and MalTotal mappings; corrected J4's malware classification and added precise publication anchors.
+- **Verification:** All previous paper references retained; local PDFs and anchors valid; unique IDs and balanced research lists; publication metadata/selection and unrelated homepage content unchanged; manual HTML/PDF abstract review and `git diff --check` passed. No browser visual inspection performed.
+- **Files:** `index.html`, `html/publications.html`, `docs/plans/2026-10-11-01-research-verification.md`, `docs/PROGRESS.md`.
+- **Next steps:** User approved commit and push to `main`; map additional system-verification projects when supplied.
+- **Blockers:** None.
+
+- **Focus:** Pull remote main while preserving local work.
+- **Completed:** Fast-forwarded 18 commits from `1d0407e` to `62a9249`; resolved the autostash conflict caused by upstream log archival while retaining the local skill-migration plan entry and session record. Existing untracked files remain in place.
+- **Verification:** Checked branch synchronization, preservation of local additions, absence of unmerged paths, and `git diff --check`.
+- **Files:** `docs/PROGRESS.md` (local reconciliation and session log); remote changes supplied by the pull.
+- **Next steps:** No further pull work; existing content follow-ups above remain pending.
+- **Blockers:** None.
 
 ### 2026-10-07
 - **Focus:** Confirm MajorDomo grant year and investigate funding amount.
