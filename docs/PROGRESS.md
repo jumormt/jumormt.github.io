@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-10-21 | [icse-2027-direct-acceptance](plans/2026-10-21-04-icse-2027-direct-acceptance.md) | E0 | done | Added Direct Accept badges and 119/2375=5.01% direct acceptance rates to all three entries; updated both News items. |
 | 2026-10-21 | [icse-2027-membership-inference](plans/2026-10-21-03-icse-2027-membership-inference.md) | E0 | done | Added `[C22]` to Full Publications and News only, with Xiao Cheng as an ordinary coauthor; local preview verified. |
 | 2026-10-21 | [seed-patches-author-links](plans/2026-10-21-02-seed-patches-author-links.md) | E0 | done | Added verified Xingrui Yu personal and Ivor Tsang A*STAR profile links to both `[C21]` entries and News; local preview updated. |
 | 2026-10-21 | [icse-2027-seed-patches](plans/2026-10-21-01-icse-2027-seed-patches.md) | E0 | done | Added `[C21]` to both 2027 lists and News; Weigang He/Xiao Cheng share equal-contribution marks, Shuangxiang Kan is corresponding author. |
@@ -47,6 +48,13 @@
 ## Session Log
 
 ### 2026-10-21
+- **Focus:** Annotate both ICSE 2027 papers as direct acceptances.
+- **Completed:** Added `Direct Accept` badges and `direct acceptance rate: 119/2375=5.01%` to `[C21]` in Selected/Full and `[C22]` in Full only; updated both News items to “directly accepted”.
+- **Verification:** Decimal calculation, exact three-entry/two-news counts, matching C21 metadata, unchanged author roles/selection, and exact unrelated-HTML preservation passed. Independent review and `git diff --check` passed; fetched remote `main` has no divergence. No browser visual inspection performed; links/assets unchanged.
+- **Files:** `index.html`, `html/publications.html`, `docs/plans/2026-10-21-04-icse-2027-direct-acceptance.md`, `docs/PROGRESS.md`.
+- **Next steps:** Continue the user's commit/push authorization for this follow-up; publication PDF/DOI/BibTeX links remain pending supply.
+- **Blockers:** None; direct acceptance outcome and 119/2375 counts are user-supplied.
+
 - **Focus:** Publish the approved ICSE 2027 updates.
 - **Completed:** Following the user's explicit “commit push” request, pushed the three content commits (`4647e23`, `cb55e87`, `f055c86`) to `origin/main`; remote advanced from `9b076bb` to `f055c86`.
 - **Verification:** Fetched remote `main` and confirmed no divergence (three local commits ahead); previous content/link checks and independent reviews passed; `git diff --check` passed; `git push origin main` succeeded.
