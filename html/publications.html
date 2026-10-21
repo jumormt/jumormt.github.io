@@ -39,6 +39,14 @@
   <div id="full-pub-timeline" style="margin-top:8px">
     <el-timeline>
       <el-timeline-item type="info" size="large">
+        <strong @click="o27=!o27" style="cursor:pointer; font-size:16px;">2027 <span style="font-size:12px;">{{o27 ? '▾' : '▸'}}</span></strong>
+        <ul v-show="o27" style="list-style: none; padding-left: 0; margin: 4px 0 0 0;">
+          <li id="pub-c21"><strong>[C21] Seed Patches to CodeQL Queries: Compositional Synthesis with Proof-of-Concept Validation</strong> <span class="label label-success">CORE-A*</span> <span class="label label-success">CCF-A</span>
+            <br>Weigang He<sup>#</sup>, <strong>Xiao Cheng<sup>#</sup></strong>, <a href="https://shuangxiangkan.github.io/">Shuangxiang Kan</a><sup>*</sup>, Wei Li, Xingrui Yu, Ivor Tsang, <a href="https://yuleisui.github.io/">Yulei Sui</a>.
+            <br><strong>ICSE '27</strong> <a href="https://conf.researchr.org/home/icse-2027" class="btn btn-primary btn-xs">Page</a></li>
+        </ul>
+      </el-timeline-item>
+      <el-timeline-item type="info" size="large">
         <strong @click="o26=!o26" style="cursor:pointer; font-size:16px;">2026 <span style="font-size:12px;">{{o26 ? '▾' : '▸'}}</span></strong>
         <ul v-show="o26" style="list-style: none; padding-left: 0; margin: 4px 0 0 0;">
           <li id="pub-c20"><strong>[C20] NEUROSYMLAND: Neuro-Symbolic Landing-Site Assessment for Robust and Edge-Deployable UAV Autonomy</strong> <span class="label label-success">CORE-A</span> <span class="label label-success">Best Paper Candidate</span>
@@ -159,7 +167,7 @@
 <script>
 new Vue({
   el: '#full-pub-timeline',
-  data: { o26: true, o25: true, o24: true, o23: true, o22: true, o20: true, o19: true }
+  data: { o27: true, o26: true, o25: true, o24: true, o23: true, o22: true, o20: true, o19: true }
 });
 </script>
 </body>
