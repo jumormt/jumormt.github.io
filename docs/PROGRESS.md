@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-10-21 | [seed-patches-author-links](plans/2026-10-21-02-seed-patches-author-links.md) | E0 | done | Added verified Xingrui Yu personal and Ivor Tsang A*STAR profile links to both `[C21]` entries and News; local preview updated. |
 | 2026-10-21 | [icse-2027-seed-patches](plans/2026-10-21-01-icse-2027-seed-patches.md) | E0 | done | Added `[C21]` to both 2027 lists and News; Weigang He/Xiao Cheng share equal-contribution marks, Shuangxiang Kan is corresponding author. |
 | 2026-10-11 | [static-analysis-heading](plans/2026-10-11-04-static-analysis-heading.md) | E0 | done | Renamed the heading to Static Analysis and Software Verification. |
 | 2026-10-11 | [autonomous-research-scope](plans/2026-10-11-03-autonomous-research-scope.md) | E0 | done | Removed the research summary; broadened C15/C20 topics to safety testing and neuro-symbolic reasoning for autonomous systems. |
@@ -45,6 +46,13 @@
 ## Session Log
 
 ### 2026-10-21
+- **Focus:** Add Xingrui Yu and Ivor Tsang author homepage links.
+- **Completed:** Added both verified destinations to `[C21]` in Selected/Full Publications and its acceptance News, preserving all visible text and author annotations.
+- **Verification:** Both URLs returned HTTP 200 and identifying affiliation/email evidence. Confirmed six new anchors, identical publication entries, and byte-for-byte original HTML after removing only those anchors. Both local preview pages serve updated content; `git diff --check` passed. No browser visual inspection performed.
+- **Files:** `index.html`, `html/publications.html`, `docs/plans/2026-10-21-02-seed-patches-author-links.md`, `docs/PROGRESS.md`.
+- **Next steps:** User can refresh the local preview at `http://127.0.0.1:8000/#pub-c21`; no push/deployment performed.
+- **Blockers:** None.
+
 - **Focus:** Add the user-reported ICSE 2027 Seed Patches acceptance.
 - **Completed:** Added identical `[C21]` entries under new expanded 2027 groups in Selected and Full Publications, with the supplied seven-author order, equal-contribution marks for Weigang He/Xiao Cheng, and a corresponding-author mark for Shuangxiang Kan; added `10/2026` News. Archived older plan-index rows and session logs without deleting history.
 - **Verification:** Manual diff and independent review passed; checked exact metadata, annotation counts, unique IDs, preserved prior publication numbers, and Selected/Full equality. Vue configuration/default state/toggle expressions passed; all three reused URLs returned HTTP 200; news image exists; `git diff --check` passed. No browser visual inspection performed.
