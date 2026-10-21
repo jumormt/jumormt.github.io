@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-10-21 | [icse-2027-membership-inference](plans/2026-10-21-03-icse-2027-membership-inference.md) | E0 | done | Added `[C22]` to Full Publications and News only, with Xiao Cheng as an ordinary coauthor; local preview verified. |
 | 2026-10-21 | [seed-patches-author-links](plans/2026-10-21-02-seed-patches-author-links.md) | E0 | done | Added verified Xingrui Yu personal and Ivor Tsang A*STAR profile links to both `[C21]` entries and News; local preview updated. |
 | 2026-10-21 | [icse-2027-seed-patches](plans/2026-10-21-01-icse-2027-seed-patches.md) | E0 | done | Added `[C21]` to both 2027 lists and News; Weigang He/Xiao Cheng share equal-contribution marks, Shuangxiang Kan is corresponding author. |
 | 2026-10-11 | [static-analysis-heading](plans/2026-10-11-04-static-analysis-heading.md) | E0 | done | Renamed the heading to Static Analysis and Software Verification. |
@@ -23,7 +24,7 @@
 | 2026-10-07 | [neurosymland-publication](plans/2026-10-07-01-neurosymland-publication.md) | E0 | done | Added matching IROS 2026 `[C20]` entries to Selected and Full Publications with CORE-A and Best Paper Candidate badges. |
 
 ## Next Steps
-- **Publication follow-up:** ICSE 2027 Seed Patches `[C21]` is complete; add PDF/DOI/BibTeX links when supplied.
+- **Publication follow-up:** ICSE 2027 `[C21]` and `[C22]` are complete; `[C22]` is Full-List-only per user preference. Add PDF/DOI/BibTeX links when supplied.
 - **Immediate:** MajorDomo Catalyst Grant year confirmed as 2026 and updated. Add its actual funding amount only when confirmed by the award notification.
 - **Pending links:** Add Weixian Qian and Tianyi Yang homepage URLs if supplied or reliably identified.
 - **Before any future code/content change:** Create a new dated plan under `docs/plans/` and add it to this index.
@@ -46,6 +47,13 @@
 ## Session Log
 
 ### 2026-10-21
+- **Focus:** Add the ICSE 2027 Membership or Predictability paper.
+- **Completed:** Added `[C22]` to Full Publications under 2027 and an acceptance announcement to `10/2026` News. Preserved the supplied four-author order and bolded Xiao Cheng without contribution-role superscripts; Selected Publications is unchanged as requested.
+- **Verification:** Checked exact title/author order, unique numbering, ordinary-coauthor formatting, preserved prior entries and Selected content, news date and links. Both reused URLs returned HTTP 200. Restarted the stopped local preview and verified both served pages match source; independent review and `git diff --check` passed. No browser visual inspection performed.
+- **Files:** `index.html`, `html/publications.html`, `docs/plans/2026-10-21-03-icse-2027-membership-inference.md`, `docs/PROGRESS.md`.
+- **Next steps:** Review at `http://127.0.0.1:8000/html/publications.html#pub-c22`; add asset links when supplied. No remote push/deployment performed.
+- **Blockers:** None. ICSE 2027 follows the ongoing acceptance-update context; title, author order, and participation role are user-supplied.
+
 - **Focus:** Add Xingrui Yu and Ivor Tsang author homepage links.
 - **Completed:** Added both verified destinations to `[C21]` in Selected/Full Publications and its acceptance News, preserving all visible text and author annotations.
 - **Verification:** Both URLs returned HTTP 200 and identifying affiliation/email evidence. Confirmed six new anchors, identical publication entries, and byte-for-byte original HTML after removing only those anchors. Both local preview pages serve updated content; `git diff --check` passed. No browser visual inspection performed.
