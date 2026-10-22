@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-10-22 | [remove-direct-accept-badges](plans/2026-10-22-01-remove-direct-accept-badges.md) | E0 | done | Removed all three Direct Accept badges; retained 119/2375=5.01% in the venue lines. |
 | 2026-10-21 | [icse-2027-direct-acceptance](plans/2026-10-21-04-icse-2027-direct-acceptance.md) | E0 | done | Added Direct Accept badges and 119/2375=5.01% direct acceptance rates to all three entries; updated both News items. |
 | 2026-10-21 | [icse-2027-membership-inference](plans/2026-10-21-03-icse-2027-membership-inference.md) | E0 | done | Added `[C22]` to Full Publications and News only, with Xiao Cheng as an ordinary coauthor; local preview verified. |
 | 2026-10-21 | [seed-patches-author-links](plans/2026-10-21-02-seed-patches-author-links.md) | E0 | done | Added verified Xingrui Yu personal and Ivor Tsang A*STAR profile links to both `[C21]` entries and News; local preview updated. |
@@ -25,7 +26,7 @@
 | 2026-10-07 | [neurosymland-publication](plans/2026-10-07-01-neurosymland-publication.md) | E0 | done | Added matching IROS 2026 `[C20]` entries to Selected and Full Publications with CORE-A and Best Paper Candidate badges. |
 
 ## Next Steps
-- **Publication follow-up:** ICSE 2027 `[C21]` and `[C22]` are complete; `[C22]` is Full-List-only per user preference. Add PDF/DOI/BibTeX links when supplied.
+- **Publication follow-up:** ICSE 2027 `[C21]` and `[C22]` retain acceptance rates in the venue line without Direct Accept badges; `[C22]` is Full-List-only. Add PDF/DOI/BibTeX links when supplied.
 - **Immediate:** MajorDomo Catalyst Grant year confirmed as 2026 and updated. Add its actual funding amount only when confirmed by the award notification.
 - **Pending links:** Add Weixian Qian and Tianyi Yang homepage URLs if supplied or reliably identified.
 - **Before any future code/content change:** Create a new dated plan under `docs/plans/` and add it to this index.
@@ -46,6 +47,14 @@
 | LDD | Keep durable project state in `docs/PROGRESS.md`; create a dated plan before future implementation or content edits. |
 
 ## Session Log
+
+### 2026-10-22
+- **Focus:** Remove Direct Accept badges per user preference.
+- **Completed:** Removed the badge from `[C21]` in Selected/Full and `[C22]` in Full; retained all three `direct acceptance rate: 119/2375=5.01%` venue annotations.
+- **Verification:** Exact comparison confirms only three badge spans were removed from HTML; authors, links, news, rates, and selection are unchanged; `git diff --check` passed. Remote `main` matched local HEAD before this correction. No browser inspection needed for the badge removal.
+- **Files:** `index.html`, `html/publications.html`, `docs/plans/2026-10-22-01-remove-direct-accept-badges.md`, `docs/PROGRESS.md`.
+- **Next steps:** Continue existing commit/push authorization; publication asset links remain pending supply.
+- **Blockers:** None.
 
 ### 2026-10-21
 - **Focus:** Annotate both ICSE 2027 papers as direct acceptances.
