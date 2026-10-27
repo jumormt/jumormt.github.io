@@ -10,6 +10,7 @@
 ## Plans Index (active/recent — see `SESSION-LOG-ARCHIVE.md` for earlier plans)
 | Date | Plan | Epic | Status | Notes |
 |------|------|------|--------|-------|
+| 2026-10-28 | [selected-publications](plans/2026-10-28-01-selected-publications.md) | E0 | done | Added DeepWukong `[J1]`, TDSC `[J2]`, and RamFuzz `[C18]` to Selected Publications; verified against Full List; commit/push authorized. |
 | 2026-10-22 | [remove-direct-accept-badges](plans/2026-10-22-01-remove-direct-accept-badges.md) | E0 | done | Removed all three Direct Accept badges; retained 119/2375=5.01% in the venue lines. |
 | 2026-10-21 | [icse-2027-direct-acceptance](plans/2026-10-21-04-icse-2027-direct-acceptance.md) | E0 | done | Added Direct Accept badges and 119/2375=5.01% direct acceptance rates to all three entries; updated both News items. |
 | 2026-10-21 | [icse-2027-membership-inference](plans/2026-10-21-03-icse-2027-membership-inference.md) | E0 | done | Added `[C22]` to Full Publications and News only, with Xiao Cheng as an ordinary coauthor; local preview verified. |
@@ -47,6 +48,14 @@
 | LDD | Keep durable project state in `docs/PROGRESS.md`; create a dated plan before future implementation or content edits. |
 
 ## Session Log
+
+### 2026-10-28
+- **Focus:** Add three existing papers to Selected Publications.
+- **Completed:** Added DeepWukong `[J1]`, TDSC `[J2]`, and RamFuzz `[C18]` under their existing year groups; expanded the oldest heading to 2020 - 2021. Fast-forwarded six remote commits while preserving unrelated local changes.
+- **Verification:** Selected/Full metadata equality, correct years/counts, preserved existing entries and unrelated HTML, local PDF/BibTeX targets, unique IDs, balanced lists, ASE Page HTTP 200, and `git diff --check` passed. No browser visual inspection performed.
+- **Files:** `index.html`, `docs/plans/2026-10-28-01-selected-publications.md`, `docs/PROGRESS.md`.
+- **Next steps:** No remaining content edits; user requested commit/push to `main`, which triggers GitHub Pages deployment.
+- **Blockers:** None.
 
 ### 2026-10-22
 - **Focus:** Remove Direct Accept badges per user preference.
